@@ -16,13 +16,17 @@
 *{box-sizing:border-box}
 body{margin:0;background:#fff;color:#0D1C24;font-family:'Montserrat',system-ui,-apple-system,'Segoe UI',sans-serif}
 .sgr-top{background:#062F4F;color:#fff}
-.sgr-top .in{max-width:1040px;margin:0 auto;padding:.85rem 1.25rem;display:flex;gap:1rem;align-items:baseline;
+.sgr-top .in{max-width:1040px;margin:0 auto;padding:.85rem 1.25rem;display:flex;gap:.4rem 1rem;align-items:baseline;
   justify-content:space-between;flex-wrap:wrap}
 .sgr-brand{font-family:'Roboto Slab',Georgia,serif;font-weight:300;font-size:1.25rem;color:#fff;text-decoration:none}
 .sgr-brand span{color:#F2D15C}
-.sgr-nav a{color:#D5DEE3;text-decoration:none;font-size:.9rem;margin-left:1.1rem}
+.sgr-nav a{color:#D5DEE3;text-decoration:none;font-size:.9rem;margin-right:1.1rem}
+.sgr-nav a:last-child{margin-right:0}
 .sgr-nav a:hover,.sgr-brand:hover{text-decoration:underline}
 .sgr-main{padding:2rem 1.25rem 3rem}
+.sgr-hero{max-width:1040px;margin:0 auto 1.5rem}
+.sgr-hero h1{font-family:'Roboto Slab',Georgia,serif;font-weight:300;color:#062F4F;font-size:2.1rem;margin:0 0 .4rem}
+.sgr-hero p{color:#4A5E6D;margin:0;max-width:720px;line-height:1.6}
 .sgr-foot{border-top:1px solid #D5DEE3;color:#4A5E6D;font-size:.85rem}
 .sgr-foot .in{max-width:1040px;margin:0 auto;padding:1.25rem}
 .sgr-foot a{color:#0D7A3C}
@@ -34,104 +38,220 @@ body{margin:0;background:#fff;color:#0D1C24;font-family:'Montserrat',system-ui,-
 <nav class="sgr-nav"><a href="/">All research</a><a href="https://www.stellargrove.com">stellargrove.com</a></nav>
 </div></header>
 <main class="sgr-main">
-<style>
-.sgr-home{max-width:1040px;margin:0 auto;font-family:'Montserrat',system-ui,-apple-system,'Segoe UI',sans-serif;color:#0D1C24}
-.sgr-home h1{font-family:'Roboto Slab',Georgia,serif;font-weight:300;color:#062F4F;font-size:2rem;margin:0 0 .4rem}
-.sgr-home .lede{color:#4A5E6D;margin:0 0 2rem;max-width:720px;line-height:1.6}
-.sgr-sec{margin:0 0 2.5rem}
-.sgr-sec h2{font-family:'Roboto Slab',Georgia,serif;font-weight:400;color:#062F4F;font-size:1.35rem;
-  border-bottom:2px solid #F2D15C;padding-bottom:.35rem;margin:0 0 1rem;display:flex;justify-content:space-between;
-  align-items:baseline;gap:1rem}
-.sgr-sec h2 a{font-family:'Montserrat',sans-serif;font-size:.85rem;font-weight:500;color:#0D7A3C}
-.sgr-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem}
-.sgr-card{display:flex;flex-direction:column;border:1px solid #D5DEE3;border-radius:8px;padding:1rem 1.1rem;
-  text-decoration:none;color:inherit;background:#fff;transition:border-color .15s,box-shadow .15s}
-.sgr-card:hover{border-color:#0D7A3C;box-shadow:0 2px 10px rgba(6,47,79,.08)}
-.sgr-card h3{font-family:'Roboto Slab',Georgia,serif;font-weight:400;font-size:1.05rem;color:#062F4F;margin:0 0 .5rem;
-  line-height:1.35}
-.sgr-card p{font-size:.88rem;line-height:1.55;color:#0D1C24;margin:0 0 .75rem;flex:1}
-.sgr-meta{font-size:.78rem;color:#4A5E6D;display:flex;gap:.5rem;align-items:center}
-.sgr-badge{background:#F8E9C2;color:#6B5208;border-radius:999px;padding:.1rem .55rem;font-weight:600;font-size:.72rem}
+<div class="sgr-hero"><h1>Research</h1><p>Data-driven analyses and interactive explainers from Stellar Grove: economics, baseball front-office questions, botanical case studies and mathematical modelling.</p></div><style>
+.sgr-idx{max-width:1040px;margin:0 auto;font-family:'Montserrat',system-ui,-apple-system,'Segoe UI',sans-serif;
+  color:#0D1C24;--sgr-ease:cubic-bezier(.2,.7,.2,1)}
+.sgr-idx *{box-sizing:border-box}
+.sgr-tools{display:flex;gap:.75rem;align-items:center;flex-wrap:wrap;margin:0 0 1.25rem}
+.sgr-search{flex:1 1 280px;display:flex;align-items:center;gap:.6rem;border:1px solid #D5DEE3;border-radius:999px;
+  padding:.55rem 1rem;background:#fff;transition:border-color .2s,box-shadow .2s}
+.sgr-search:focus-within{border-color:#0D7A3C;box-shadow:0 0 0 3px rgba(13,122,60,.15)}
+.sgr-search svg{flex:none;color:#4A5E6D}
+.sgr-search input{border:0;outline:0;font:inherit;font-size:.95rem;width:100%;background:transparent;color:inherit;
+  padding:0;margin:0}
+.sgr-btn{font:500 .85rem 'Montserrat',sans-serif;border:1px solid #D5DEE3;background:#fff;color:#062F4F;
+  border-radius:999px;padding:.55rem 1rem;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.sgr-btn:hover{background:#062F4F;border-color:#062F4F;color:#fff}
+.sgr-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin:0 0 1.5rem}
+.sgr-chip{font:500 .8rem 'Montserrat',sans-serif;border:0;border-radius:999px;padding:.35rem .8rem;cursor:pointer;
+  background:#EEF2F1;color:#062F4F;display:inline-flex;gap:.45rem;align-items:center;transition:transform .15s}
+.sgr-chip:hover{transform:translateY(-1px)}
+.sgr-chip i{width:.55rem;height:.55rem;border-radius:50%;background:var(--a);display:inline-block}
+.sgr-chip b{font-weight:600;color:#4A5E6D}
+.sgr-empty{color:#4A5E6D;padding:1rem 0}
+.sgr-sec{border:1px solid #D5DEE3;border-radius:10px;margin:0 0 .85rem;background:#fff;overflow:hidden;
+  border-left:4px solid var(--a);transition:box-shadow .25s}
+.sgr-sec.open{box-shadow:0 6px 24px rgba(6,47,79,.08)}
+.sgr-head{all:unset;box-sizing:border-box;width:100%;display:flex;align-items:center;gap:1rem;cursor:pointer;
+  padding:1.05rem 1.25rem;transition:background .2s}
+.sgr-head:hover{background:#F6F8F8}
+.sgr-head:focus-visible{outline:2px solid #0D7A3C;outline-offset:-2px}
+.sgr-head-t{flex:1;min-width:0}
+.sgr-name{display:block;font-family:'Roboto Slab',Georgia,serif;font-weight:400;font-size:1.3rem;color:#062F4F;
+  line-height:1.3}
+.sgr-blurb{display:block;font-size:.88rem;color:#4A5E6D;margin-top:.15rem;line-height:1.5}
+.sgr-count{flex:none;font-size:.8rem;font-weight:600;color:#062F4F;background:#EEF2F1;border-radius:999px;
+  padding:.2rem .65rem;white-space:nowrap}
+.sgr-chev{flex:none;width:2rem;height:2rem;border-radius:50%;display:grid;place-items:center;background:#EEF2F1;
+  transition:transform .35s var(--sgr-ease),background .2s}
+.sgr-chev::before{content:"";width:.5rem;height:.5rem;border-right:2px solid #062F4F;border-bottom:2px solid #062F4F;
+  transform:translateY(-2px) rotate(45deg)}
+.sgr-sec.open .sgr-chev{transform:rotate(180deg);background:#F2D15C}
+.sgr-body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s var(--sgr-ease)}
+.sgr-sec.open .sgr-body{grid-template-rows:1fr}
+.sgr-inner{overflow:hidden;min-height:0}
+.sgr-list{padding:0 .75rem 1rem}
+.sgr-hub{display:inline-block;margin:0 1.25rem .25rem;font-size:.85rem;font-weight:500;color:#0D7A3C}
+.sgr-group{font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#4A5E6D;
+  margin:1rem .5rem .35rem}
+.sgr-row{display:flex;align-items:center;gap:1rem;padding:.7rem .75rem;border-radius:8px;text-decoration:none;
+  color:inherit;position:relative;opacity:0;transform:translateY(6px);
+  transition:background .2s,opacity .35s var(--sgr-ease),transform .35s var(--sgr-ease)}
+.sgr-sec.open .sgr-row{opacity:1;transform:none;transition-delay:calc(var(--i,0) * 25ms)}
+.sgr-row::before{content:"";position:absolute;left:0;top:.6rem;bottom:.6rem;width:3px;border-radius:3px;
+  background:var(--a);transform:scaleY(0);transition:transform .2s}
+.sgr-row:hover,.sgr-row:focus-visible{background:#F6F8F8;outline:0}
+.sgr-row:hover::before,.sgr-row:focus-visible::before{transform:scaleY(1)}
+.sgr-row-main{flex:1;min-width:0}
+.sgr-row-t{display:block;font-weight:600;font-size:.98rem;color:#062F4F;line-height:1.4}
+.sgr-row-s{display:block;font-size:.86rem;color:#4A5E6D;line-height:1.5;margin-top:.15rem;overflow:hidden;
+  display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical}
+.sgr-row:hover .sgr-row-s,.sgr-row:focus-visible .sgr-row-s{-webkit-line-clamp:4}
+.sgr-row-m{flex:none;display:flex;gap:.5rem;align-items:center;font-size:.78rem;color:#4A5E6D}
+.sgr-go{flex:none;color:#0D7A3C;font-weight:600;transition:transform .2s}
+.sgr-row:hover .sgr-go{transform:translateX(4px)}
+.sgr-badge{background:#F8E9C2;color:#6B5208;border-radius:999px;padding:.1rem .55rem;font-weight:600;font-size:.72rem;
+  white-space:nowrap}
+.sgr-tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem;padding:0 1.25rem 1.25rem}
+.sgr-tile{display:flex;flex-direction:column;gap:.5rem;border-radius:10px;padding:1.2rem;text-decoration:none;
+  color:#fff;background:linear-gradient(135deg,#062F4F,#0B3D63);min-height:150px;transition:transform .2s,box-shadow .2s}
+.sgr-tile:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(6,47,79,.25)}
+.sgr-tile .sgr-row-t{color:#fff;font-size:1.05rem}
+.sgr-tile .sgr-row-s{color:#D5DEE3;-webkit-line-clamp:3}
+.sgr-tile .sgr-go{color:#F2D15C;margin-top:auto}
+.sgr-hide{display:none!important}
+.sgr-fallback a{color:#0D7A3C}
+.sgr-fallback h2{font-family:'Roboto Slab',Georgia,serif;font-weight:400;color:#062F4F;font-size:1.2rem}
+@media (max-width:640px){.sgr-row-m .sgr-date{display:none}.sgr-blurb{display:none}.sgr-name{font-size:1.15rem}}
+@media (prefers-reduced-motion:reduce){.sgr-idx *{transition:none!important}.sgr-row{opacity:1;transform:none}}
 </style>
-<div class="sgr-home">
-<h1>Research</h1>
-<p class="lede">Data-driven analyses and interactive explainers from Stellar Grove: economics, baseball front-office questions, botanical case studies and mathematical modelling.</p>
-<section class="sgr-sec"><h2>Economics</h2><div class="sgr-grid">
-<a class="sgr-card" href="/econ/baumol/"><h3>Services: why healthcare and education keep getting pricier</h3><p>Much as Baumol predicted. Labor-intensive services have risen 3.3% a year on average, close to wage growth of 3.3%, while goods fell 0.2% a year. Since 2005 services have become 104% more expensive relative to goods.</p><span class="sgr-meta">2026-11-21</span></a>
-<a class="sgr-card" href="/econ/convergence/"><h3>Are poorer countries catching up?</h3><p>Only slowly, and only recently. Across 1990–2024 the poorest countries grew slightly faster than rich ones (slope -0.39), a half-life of about 163 years to close half the gap. Controlling for investment, population growth and schooling…</p><span class="sgr-meta">2026-11-21</span></a>
-<a class="sgr-card" href="/econ/fed/"><h3>Inflation and the Fed: was policy behind the curve?</h3><p>Yes. By May 2021 the balanced-approach rule called for a funds rate more than a point above the actual one; the gap peaked at 9.1 points in March 2022, and policy stayed more than a point behind for 29 months. Today the rule says 4.57%…</p><span class="sgr-meta">2026-11-21</span></a>
-<a class="sgr-card" href="/econ/gasoline/"><h3>Energy: do gas prices rise like rockets and fall like feathers?</h3><p>Only briefly. Rises reach the pump a little faster at first (84% vs 72% after two weeks), but falls catch up by week four (83% vs 96%), and the four-week difference isn&#x27;t statistically significant (p = 0.43) in any of the five…</p><span class="sgr-meta">2026-11-21</span></a>
-<a class="sgr-card" href="/econ/housing/"><h3>Housing: what higher mortgage rates did to prices and affordability</h3><p>The mortgage payment on the median new home now takes 27% of median household income, up from 22% in 2019 and 19% at the 2020 low. Rates at 7.19% (vs a 2.68% low) have slowed prices more than cut them: national prices are 2.1% over the…</p><span class="sgr-meta">2026-11-21</span></a>
-<a class="sgr-card" href="/econ/labor/"><h3>Labor: did the job market get a soft landing?</h3><p>Yes, so far. Job openings fell 41% from their March 2022 peak while unemployment rose only +0.5 points to 4.2%. With the pre-2020 trade-off (each 1% fall in openings came with a 1.25% rise in unemployment), a drop that large would have…</p><span class="sgr-meta">2026-11-21</span></a>
-<a class="sgr-card" href="/econ/merger_sim/"><h3>Merger simulation: would combining two rivals raise prices?</h3><p>Merging Ardent and Brio would raise their prices about 7.1% and 8.2%. The standard simulation recovers that within 0.01 points, but only with properly instrumented demand: naive OLS demand predicts 8%/9%.</p><span class="sgr-meta">2026-11-21</span></a>
-<a class="sgr-card" href="/econ/sentiment/"><h3>Consumers: does sentiment predict spending?</h3><p>No. Adding sentiment to a spending forecast makes its error 2.9% larger outside the pandemic months. Meanwhile sentiment has run far below what unemployment and inflation predict: -47 points today, a gap 5.3 times its usual size before…</p><span class="sgr-meta">2026-11-21</span></a>
-<a class="sgr-card" href="/econ/tariffs/"><h3>Trade: who pays for tariffs?</h3><p>Almost entirely U.S. buyers. Through the 2019–20 escalation, Chinese exporters&#x27; pre-tariff prices fell just 2.6% relative to other countries&#x27; (vs the months just before the tariffs), while the average tariff on Chinese goods rose about…</p><span class="sgr-meta">2026-11-21</span></a>
-<a class="sgr-card" href="/econ/yield_curve/"><h3>Finance: is an inverted yield curve a reliable recession signal?</h3><p>Useful, but far from infallible. Out of sample the spread separates months that are 12 months before a recession from the rest with an AUC of 0.69, and 4 of 5 completed inversions since 1982 were followed by a recession within two years.…</p><span class="sgr-meta">2026-11-21</span></a>
-</div></section>
-<section class="sgr-sec"><h2>Baseball</h2><div class="sgr-grid">
-<a class="sgr-card" href="/baseball/ace_effect/"><h3>The ace effect: do elite starters sell tickets?</h3><p>Elite starters barely move the gate. A home ace moves attendance +0.0%, an interval (-1.1% to +1.2%) that includes zero; a visiting ace moves attendance +1.1%, an interval (-0.2% to +2.3%) that includes zero. Fans buy the date, the…</p><span class="sgr-meta">2026-11-21</span></a>
-<a class="sgr-card" href="/baseball/aging_curves/"><h3>Aging curves: what a free agent&#x27;s bat is worth over a five-year deal</h3><p>Hitters peak around 24–25 and decline steadily after. The same .360 bat is worth about 17.1 WAR over five years if signed at 27, 15.6 at 30 and 14.2 at 33.</p><span class="sgr-meta">2026-11-21</span></a>
-<a class="sgr-card" href="/baseball/baserunning/"><h3>Baserunning under the new rules: when to send the runner</h3><p>The 2023 rules turned the running game back on: attempts jumped from 1.36 to 1.88 a game by 2024 and success from 75% to 80%. At 77% in 2026, league runners still beat the 65%–74% break-even for the most common steal (second base, 0–1…</p><span class="sgr-meta">2026-11-21</span></a>
-<a class="sgr-card" href="/baseball/buy_low_sell_high/"><h3>Buy low, sell high: 2026 hitters whose results outran their contact</h3><p>Contact quality is a better guide to next season than results: xwOBA out-predicted actual wOBA in 2 of 3 test seasons. The blend flags J.T. Realmuto as the top buy-low bat (contact quality adds +.021 to his 2027 projection) and Jonny…</p><span class="sgr-meta">2026-11-21</span></a>
-<a class="sgr-card" href="/baseball/catcher_framing/"><h3>Catcher framing: the hidden runs behind the plate</h3><p>Framing is a real, repeatable skill worth a lot of runs. Austin Wells saved his pitchers about 10 runs in 2026; Logan O&#x27;Hoppe cost his 9. The year-to-year correlation in framing rate is 0.43.</p><span class="sgr-meta">2026-11-21</span></a>
-<a class="sgr-card" href="/baseball/promotion_roi/"><h3>Promotion ROI: what actually puts fans in the seats</h3><p>Postgame concert nights draw the biggest real lift, about 21% (~6,198 fans a game), after comparing each game with the same club&#x27;s other games. Raw comparisons overstate most promotions because clubs schedule them on nights that sell…</p><span class="sgr-meta">2026-11-21</span></a>
-<a class="sgr-card" href="/baseball/shift_ban/"><h3>After the shift ban: who gained, and did it last?</h3><p>Banning the shift raised formerly shifted hitters&#x27; hit rate on grounders and low liners by about +36 points in 2023 relative to everyone else (95% CI +21 to +51): roughly 5 extra hits a season. By 2026 the edge is +28 points as defenses…</p><span class="sgr-meta">2026-11-21</span></a>
-<a class="sgr-card" href="/baseball/starter_hook/"><h3>When to pull the starter</h3><p>The same starter allows about +17 points more wOBA the third time through the order than the first, after adjusting for who&#x27;s batting. Leaving a middle starter in for a third look instead of going to an average reliever costs about 0.14…</p><span class="sgr-meta">2026-11-21</span></a>
-<a class="sgr-card" href="/baseball/stuff_plus/"><h3>Stuff+: grading pitches on physics, not outcomes</h3><p>A pitch&#x27;s raw traits alone predict a pitcher&#x27;s future better than his results do: first-half Stuff+ correlates 0.35 with second-half run prevention, vs 0.15 for first-half results. Top pitch of 2026: Tyler Rogers&#x27;s sinker (Stuff+ 124).</p><span class="sgr-meta">2026-11-21</span></a>
-<a class="sgr-card" href="/baseball/ticket_churn/"><h3>Season-ticket churn: who won&#x27;t renew, and who&#x27;s worth an offer</h3><p>Ticket usage is the tell: every 10 points of scan rate lost raises the odds of leaving by about 27%. But the accounts most likely to leave aren&#x27;t the best ones to spend offers on: targeting by expected net value instead of raw churn risk…</p><span class="sgr-meta">2026-11-21<span class="sgr-badge">Simulated data</span></span></a>
-<a class="sgr-card" href="/baseball/ticket_pricing/"><h3>Dynamic ticket pricing: what each seat should cost, game by game</h3><p>In this simulated club, pricing each section to its measured price sensitivity lifts game-day revenue +25.4% over current pricing, mostly by filling empty seats (the park runs 61% full today). Using naive elasticities instead changes…</p><span class="sgr-meta">2026-11-21<span class="sgr-badge">Simulated data</span></span></a>
-<a class="sgr-card" href="/baseball/win_value/"><h3>The marginal revenue of a win</h3><p>One extra win brings about 13,672 more home fans this season and 5,131 next season: roughly $1.41M of gate revenue at $75 a fan. That&#x27;s a fraction of the commonly cited $8–10M free-agent price of a win, so gate alone never justifies a…</p><span class="sgr-meta">2026-11-21</span></a>
-</div></section>
-<section class="sgr-sec"><h2>Songrove Botanicals</h2><div class="sgr-grid">
-<a class="sgr-card" href="/songrove/b01_phytochemical_potency_drift/"><h3>Botanical potency drift</h3><p>Out-of-spec phenolic batches are forecastable before harvest (AUC 0.96 on held-out seasons), but most of that skill is species and farm (baseline AUC 0.94); drought is the climate signal worth watching.</p><span class="sgr-meta">2026-11-21<span class="sgr-badge">Simulated data</span></span></a>
-<a class="sgr-card" href="/songrove/b02_erw_mrv_detection/"><h3>Enhanced rock weathering</h3><p>At a realistic 20 t/ha dose the removal signal (~0.4 t CO2/ha/yr) is smaller than core-to-core noise; verification is a question of how many fields you sample, not how many cores you take in each.</p><span class="sgr-meta">2026-11-21<span class="sgr-badge">Simulated data</span></span></a>
-<a class="sgr-card" href="/songrove/b03_agrivoltaics_tipping_point/"><h3>Agrivoltaics</h3><p>Microclimate benefits reverse beyond ~1.9 ha, and shade tolerance ranges from 10% PAR reduction (maize) to 44% (fruit &amp; berries) for a ≤10% yield penalty — siting should match crop to panel density.</p><span class="sgr-meta">2026-11-21<span class="sgr-badge">Simulated data</span></span></a>
-<a class="sgr-card" href="/songrove/b04_hnt_rice_chalkiness/"><h3>Hot nights and rice quality</h3><p>Night heat is ~2.9× as damaging to rice chalkiness as day heat per °C, and a +2 °C season costs ~6% head rice; a tolerant line halves the night penalty.</p><span class="sgr-meta">2026-11-21<span class="sgr-badge">Simulated data</span></span></a>
-<a class="sgr-card" href="/songrove/b05_maize_pollen_heat_vpd/"><h3>Maize pollen at anthesis</h3><p>Recovered thresholds match Guan et al. (viability 32.5 °C / 0.85 kPa); at +2 °C the share of anthesis days losing &gt; 25% viability rises from 43% to 67%, and dry sites carry most of it.</p><span class="sgr-meta">2026-11-21<span class="sgr-badge">Simulated data</span></span></a>
-<a class="sgr-card" href="/songrove/b06_co2_nutrient_dilution/"><h3>CO2 nutrient dilution</h3><p>Elevated CO2 dilutes zinc by ~8% in C3 staples, pushing ~48,000 more people per million below their zinc requirement in a C3-staple population.</p><span class="sgr-meta">2026-11-21<span class="sgr-badge">Simulated data</span></span></a>
-<a class="sgr-card" href="/songrove/b07_rice_awd_tradeoff/"><h3>Rice AWD</h3><p>AWD cuts CH4 ~51% while N2O rises ~41%; the N2O penalty is real on acid, warm soils but never erodes the net benefit below a 19% CO2e cut in the modelled range.</p><span class="sgr-meta">2026-11-21<span class="sgr-badge">Simulated data</span></span></a>
-<a class="sgr-card" href="/songrove/b08_pollinator_limited_yield/"><h3>Pollinator-limited yield</h3><p>25/32 crops are pollination-limited; in those, more bee visits could close ~60% of the yield gap to top farms, concentrated in the most pollinator-dependent crops.</p><span class="sgr-meta">2026-11-21<span class="sgr-badge">Simulated data</span></span></a>
-<a class="sgr-card" href="/songrove/b09_inoculant_efficacy_gap/"><h3>Microbial inoculants</h3><p>Inoculants average 0.7% in the field vs a 15% claim, but the response is predictable from SOM, pH and P: targeting lifts net return from $-24 to $12/ha.</p><span class="sgr-meta">2026-11-21<span class="sgr-badge">Simulated data</span></span></a>
-<a class="sgr-card" href="/songrove/b10_intercropping_cover_legacy/"><h3>Intercropping overyielding under high inputs, and cover-crop legacies that flip sign by climate</h3><p>Intercropping&#x27;s land advantage erodes by 0.15 LER per 100 kg N, and cover-crop legacies range from +14% (tropical) to -11% (dry): intercrops pay most in low-input systems, cover crops where water is not limiting.</p><span class="sgr-meta">2026-11-21<span class="sgr-badge">Simulated data</span></span></a>
-<a class="sgr-card" href="/songrove/s01_adulteration_risk_scoring/"><h3>Botanical adulteration risk scoring</h3><p>A price-and-supplier risk score (AUC 0.77) plus tiered testing (Risk-tiered: HPTLC all, HPLC-MS top 25%) is the cheapest policy at $302/lot; published prevalence figures overstate a controlled supply chain.</p><span class="sgr-meta">2026-11-21<span class="sgr-badge">Simulated data</span></span></a>
-<a class="sgr-card" href="/songrove/s02_ashwagandha_label_gap/"><h3>Ashwagandha label claims</h3><p>Ashwagandha labels overstate HPLC withanolides ~11×, and ~94% of that gap is the assay definition, not the plant: specs should name the method, not just a percentage.</p><span class="sgr-meta">2026-11-21<span class="sgr-badge">Simulated data</span></span></a>
-<a class="sgr-card" href="/songrove/s03_herb_drying_eo_retention/"><h3>Herb drying</h3><p>Optimal drying temperatures recovered for all three herbs (oregano 39 °C, sage 45 °C, peppermint 38 °C); a shared 39 °C setpoint costs at most 4% quality, while running hot (55 °C) costs peppermint 68%.</p><span class="sgr-meta">2026-11-21<span class="sgr-badge">Simulated data</span></span></a>
-<a class="sgr-card" href="/songrove/s04_saffron_fingerprinting/"><h3>Saffron provenance and adulteration fingerprinting</h3><p>Isotopes + elements identify origin (88% cross-validated) while metabolomics tracks harvest year; turmeric and paprika are caught at ~6–9% w/w, safflower only at ~14%.</p><span class="sgr-meta">2026-11-21<span class="sgr-badge">Simulated data</span></span></a>
-<a class="sgr-card" href="/songrove/s05_hemp_thc_compliance/"><h3>Hemp &#x27;hot crop&#x27; risk</h3><p>High-CBD hemp should be sampled by ~day 43 after floral initiation (others by ~day 46) to keep failure risk under 5%; late-season samples fail 29% of the time.</p><span class="sgr-meta">2026-11-21<span class="sgr-badge">Simulated data</span></span></a>
-<a class="sgr-card" href="/songrove/s06_cacao_cadmium_blending/"><h3>Cacao cadmium</h3><p>Blending lots to product-level EU limits with 25% headroom buys 100% of demand and cuts unsold lots from 42% to 28%; the planned 15% headroom would fail ~15% of product tests.</p><span class="sgr-meta">2026-11-21<span class="sgr-badge">Simulated data</span></span></a>
-<a class="sgr-card" href="/songrove/s07_vanilla_price_quality/"><h3>Vanilla boom-bust</h3><p>Price spikes lower vanillin through early harvest and quick curing (-0.54 pts for a +$400/kg boom); early harvest is the larger channel per dollar, quick curing the biggest per-lot penalty (-0.35 pts), and theft pressure adds early picking…</p><span class="sgr-meta">2026-11-21<span class="sgr-badge">Simulated data</span></span></a>
-<a class="sgr-card" href="/songrove/s08_postharvest_storage_roi/"><h3>Smallholder post-harvest loss</h3><p>Hermetic bags cut storage loss ~7 pp (ITT) with a median 3× benefit/cost; a naive TWFE understates the effect by 7% under staggered adoption.</p><span class="sgr-meta">2026-11-21<span class="sgr-badge">Simulated data</span></span></a>
-<a class="sgr-card" href="/songrove/s09_index_insurance_basis_risk/"><h3>Index insurance basis risk</h3><p>A satellite index leaves 35% of severe farm losses unpaid (crop-model hybrid 30%); the cover only beats no insurance for a CRRA-2 farmer if premium loading stays below ~27% (satellite) to ~54% (area-yield).</p><span class="sgr-meta">2026-11-21<span class="sgr-badge">Simulated data</span></span></a>
-<a class="sgr-card" href="/songrove/s10_soil_carbon_mrv_aggregation/"><h3>Soil-carbon MRV for smallholders</h3><p>Individual smallholder soil-carbon payments are within ±20% only 19% of the time; groups of ≥2500 plots with a 60-plot reference-lab check reach 90%, and without bias calibration grouping alone never gets there.</p><span class="sgr-meta">2026-11-21<span class="sgr-badge">Simulated data</span></span></a>
-</div></section>
-<section class="sgr-sec"><h2>Concrete Mathematics<a href="/explainers/">Overview →</a></h2><div class="sgr-grid">
-<a class="sgr-card" href="/explainers/ch01_drug_dosing/"><h3>Dosing a drug on a schedule</h3><p>For a drug with a 6-hour half-life and a window of 10–25 mg/L, doses can be at most 7.9 hours apart. On a 6-hourly schedule a dose of 12.5 mg/L settles at 12.5–25.0 mg/L, and a loading dose gets there from the first dose.</p><span class="sgr-meta">2026-11-23</span></a>
-<a class="sgr-card" href="/explainers/ch01_fishery_quota/"><h3>Fishing to a fixed quota</h3><p>The stock can sustain at most 12.5 thousand tonnes a year. A quota of 10 is safe while the stock stays above 28; a quota of 13, just 4% over the maximum, wipes the fishery out in 51 years.</p><span class="sgr-meta">2026-11-23</span></a>
-<a class="sgr-card" href="/explainers/ch01_lake_pollution/"><h3>Cleaning up a polluted lake</h3><p>With the discharge stopped, the lake falls from 20 to 5 µg/L in 6.2 years. If the inflow is only cut to 6 µg/L, it never gets there.</p><span class="sgr-meta">2026-11-23</span></a>
-<a class="sgr-card" href="/explainers/ch02_competition/"><h3>Competition: coexist or exclude?</h3><p>Both species survive when each limits itself more than it limits its rival. With competition coefficients 0.5 and 0.6, they settle at 86 and 29, a stable node. Make the effects strong both ways and the starting numbers decide the winner.</p><span class="sgr-meta">2026-11-23</span></a>
-<a class="sgr-card" href="/explainers/ch02_tunnel_traffic/"><h3>The best speed through a tunnel</h3><p>Throughput peaks at a surprisingly low 31 km/h (19 mph), carrying 1,491 cars an hour per lane. Greenberg&#x27;s classic fit to Lincoln Tunnel data puts the best speed at 17.2 mph and capacity at 1,443 an hour: nearly the same answer, from data.</p><span class="sgr-meta">2026-11-23</span></a>
-<a class="sgr-card" href="/explainers/ch03_optimal_harvest/"><h3>Harvesting a fishery optimally</h3><p>At a 5% discount rate the owner should hold the stock at 56.8 thousand tonnes, above the maximum-yield level of 50 and far above the 20 that open access drives it to, and get there by fishing flat out for 1.1 years.</p><span class="sgr-meta">2026-11-23</span></a>
-<a class="sgr-card" href="/explainers/ch03_workers/"><h3>How many workers to hire</h3><p>Hire until the last worker&#x27;s output is worth exactly the wage: 100 workers. A 10% pay rise cuts that to 79, a 21% drop, because labour demand has elasticity -2.5 when labour&#x27;s share is 0.6.</p><span class="sgr-meta">2026-11-23</span></a>
-<a class="sgr-card" href="/explainers/ch04_stopping_distance/"><h3>Does the stopping-distance model fit?</h3><p>The physics model fits the 50 cars better than a straight line (Akaike weight 0.76), and its fitted reaction time, 0.84 s, is plausible. Accept it, with modest confidence.</p><span class="sgr-meta">2026-11-23</span></a>
-<a class="sgr-card" href="/explainers/ch04_traffic_models/"><h3>Three traffic laws, one data set</h3><p>All three laws track the data closely (R² 0.91–0.99), yet AIC picks Greenberg decisively (weight 1.00), and residual patterns rule out the straight line. The choice matters: predicted lane capacity ranges from 1,442 to 1,693 vehicles an…</p><span class="sgr-meta">2026-11-23</span></a>
-<a class="sgr-card" href="/explainers/ch05_extinction/"><h3>Why small populations die out</h3><p>With 25% more births than deaths, a colony of 5 still dies out with probability 33%. Getting that risk under 5% takes 14 founders.</p><span class="sgr-meta">2026-11-23</span></a>
-<a class="sgr-card" href="/explainers/ch05_poisson_arrivals/"><h3>Random arrivals at the checkout</h3><p>Even at a steady average of 1.8 a minute, 17% of minutes see nobody and 4% see five or more. One simulated day pins the rate to 1.84 (1.72–1.96), and the Poisson shape fits (p = 0.65).</p><span class="sgr-meta">2026-11-23</span></a>
-<a class="sgr-card" href="/explainers/ch06_barber/"><h3>Should the barber hire an assistant?</h3><p>Alone, the barber turns away 38% of customers. An assistant cuts that to 9%, adding 0.90 haircuts an hour worth $22.41, against a $30 wage: don&#x27;t hire (net −$7.59 an hour).</p><span class="sgr-meta">2026-11-23</span></a>
-<a class="sgr-card" href="/explainers/ch06_checkout_lines/"><h3>How many checkouts to open</h3><p>The work needs 3.6 cashiers on average, but 4 lanes leave customers waiting 3.9 minutes on average. Opening one more cuts that to 0.6; meeting &#x27;80% start within 2 minutes&#x27; takes 5 lanes.</p><span class="sgr-meta">2026-11-23</span></a>
-<a class="sgr-card" href="/explainers/ch07_birds_and_worms/"><h3>Which worms should a bird eat?</h3><p>Rank worms by energy per second of handling: big worms (5 J/s) beat small ones (2 J/s). The bird should still eat small worms now, and ignore them once big worms are met more than 0.083 times a second, however many small worms there are.</p><span class="sgr-meta">2026-11-23</span></a>
-<a class="sgr-card" href="/explainers/ch07_machine_replacement/"><h3>When to replace a machine</h3><p>Replace the machine once it reaches condition 4 of 9. That rule cuts the discounted cost of a new machine by 65% compared with running it into the ground, and averages 8.88 per period in the long run.</p><span class="sgr-meta">2026-11-23</span></a>
-<a class="sgr-card" href="/explainers/ch08_queue_estimation/"><h3>How sure is the predicted wait?</h3><p>Rates estimated to within about ±16% give a predicted wait of 2.7 minutes, but the 95% interval runs from 1.4 to 6 minutes: each 1% error in λ moves the wait by 2.4%, and that multiplier explodes as utilisation nears 1.</p><span class="sgr-meta">2026-11-23</span></a>
-<a class="sgr-card" href="/explainers/ch08_sensitivity/"><h3>Which inputs matter most?</h3><p>Flow and volume matter one-for-one (elasticities -1.0 and +1.0). The target and the inflow level matter less today (-0.80, +0.13), but the inflow&#x27;s influence grows 11-fold as it nears the target.</p><span class="sgr-meta">2026-11-23</span></a>
-<a class="sgr-card" href="/explainers/ch09_dimensional_analysis/"><h3>Dimensional analysis</h3><p>Units alone force the period of a pendulum to be T = C\sqrt{l/g}: mass cannot matter, and doubling the length multiplies the period by √2. The experiment then only has to find one number, C\sqrt{g} = 6.26 (theory: 2π = 6.28).</p><span class="sgr-meta">2026-11-23</span></a>
-<a class="sgr-card" href="/explainers/ch09_yellow_light/"><h3>The yellow-light dilemma</h3><p>At 60 km/h with a 3-second amber, a driver between 25 m and 63 m from the line can do neither: a 38 m dilemma zone. Removing it takes an amber of 5.3 s at this speed.</p><span class="sgr-meta">2026-11-23</span></a>
-<a class="sgr-card" href="/explainers/ch10_logistic_map/"><h3>From order to chaos in one line</h3><p>As the growth rate r rises the population goes from steady, to alternating every other year at r = 3, to 4-, 8-, 16-year cycles, and into chaos past r ≈ 3.5700. At r = 3.9 two populations differing by one part in 100 million disagree…</p><span class="sgr-meta">2026-11-23</span></a>
-<a class="sgr-card" href="/explainers/ch10_predator_prey/"><h3>Predators, prey and the paradox of enrichment</h3><p>Below a carrying capacity of 3.0 the populations settle down; above it the equilibrium turns into an unstable spiral and the system locks onto a limit cycle. At K = 5 prey swing between 0.0027 and 3.56 every 25 time units.</p><span class="sgr-meta">2026-11-23</span></a>
-<a class="sgr-card" href="/explainers/ch11_river_spill/"><h3>A spill drifting downstream</h3><p>The pollution peaks at the intake 5.5 hours after the spill, at 3.89 mg/L, 78 times the 0.05 mg/L limit. The intake should close for about 3.6 hours (4.0 to 7.6 h after the spill).</p><span class="sgr-meta">2026-11-23</span></a>
-<a class="sgr-card" href="/explainers/ch11_traffic_light/"><h3>The queue at a red light</h3><p>During a 45 s red, the back of the queue moves upstream at 3 m/s even though every car moves forward or stands still. It keeps growing after green, peaking at 169 m, and needs 80 s of green to clear completely.</p><span class="sgr-meta">2026-11-23</span></a>
-<a class="sgr-card" href="/explainers/ch12_forest_rotation/"><h3>When to cut the forest</h3><p>At a 3% interest rate, cut every 36 years (Faustmann), not at the 48 years that maximise timber yield. Waiting for maximum yield would cost 10% of the land&#x27;s value; ignoring the next crop (cutting at 43) costs 4%.</p><span class="sgr-meta">2026-11-23</span></a>
-<a class="sgr-card" href="/explainers/ch12_linear_program/"><h3>The workshop&#x27;s product mix</h3><p>Make 20 tables and 60 chairs for $1,800 a week. An extra carpentry hour is worth $10, an extra finishing hour $10, and more chair demand $0: that constraint has 10 chairs of slack.</p><span class="sgr-meta">2026-11-23</span></a>
-</div></section>
-</div>
+<div class="sgr-idx"><div id="sgr-research" data-src=""><div class="sgr-fallback"><h2>Economics</h2><ul><li><a href="/econ/baumol/">Services: why healthcare and education keep getting pricier</a></li><li><a href="/econ/convergence/">Are poorer countries catching up?</a></li><li><a href="/econ/fed/">Inflation and the Fed: was policy behind the curve?</a></li><li><a href="/econ/gasoline/">Energy: do gas prices rise like rockets and fall like feathers?</a></li><li><a href="/econ/housing/">Housing: what higher mortgage rates did to prices and affordability</a></li><li><a href="/econ/labor/">Labor: did the job market get a soft landing?</a></li><li><a href="/econ/merger_sim/">Merger simulation: would combining two rivals raise prices?</a></li><li><a href="/econ/sentiment/">Consumers: does sentiment predict spending?</a></li><li><a href="/econ/tariffs/">Trade: who pays for tariffs?</a></li><li><a href="/econ/yield_curve/">Finance: is an inverted yield curve a reliable recession signal?</a></li></ul><h2>Baseball</h2><ul><li><a href="/baseball/ace_effect/">The ace effect: do elite starters sell tickets?</a></li><li><a href="/baseball/aging_curves/">Aging curves: what a free agent&#x27;s bat is worth over a five-year deal</a></li><li><a href="/baseball/baserunning/">Baserunning under the new rules: when to send the runner</a></li><li><a href="/baseball/buy_low_sell_high/">Buy low, sell high: 2026 hitters whose results outran their contact</a></li><li><a href="/baseball/catcher_framing/">Catcher framing: the hidden runs behind the plate</a></li><li><a href="/baseball/promotion_roi/">Promotion ROI: what actually puts fans in the seats</a></li><li><a href="/baseball/shift_ban/">After the shift ban: who gained, and did it last?</a></li><li><a href="/baseball/starter_hook/">When to pull the starter</a></li><li><a href="/baseball/stuff_plus/">Stuff+: grading pitches on physics, not outcomes</a></li><li><a href="/baseball/ticket_churn/">Season-ticket churn: who won&#x27;t renew, and who&#x27;s worth an offer</a></li><li><a href="/baseball/ticket_pricing/">Dynamic ticket pricing: what each seat should cost, game by game</a></li><li><a href="/baseball/win_value/">The marginal revenue of a win</a></li></ul><h2>Songrove Botanicals</h2><ul><li><a href="/songrove/b01_phytochemical_potency_drift/">Botanical potency drift</a></li><li><a href="/songrove/b02_erw_mrv_detection/">Enhanced rock weathering</a></li><li><a href="/songrove/b03_agrivoltaics_tipping_point/">Agrivoltaics</a></li><li><a href="/songrove/b04_hnt_rice_chalkiness/">Hot nights and rice quality</a></li><li><a href="/songrove/b05_maize_pollen_heat_vpd/">Maize pollen at anthesis</a></li><li><a href="/songrove/b06_co2_nutrient_dilution/">CO2 nutrient dilution</a></li><li><a href="/songrove/b07_rice_awd_tradeoff/">Rice AWD</a></li><li><a href="/songrove/b08_pollinator_limited_yield/">Pollinator-limited yield</a></li><li><a href="/songrove/b09_inoculant_efficacy_gap/">Microbial inoculants</a></li><li><a href="/songrove/b10_intercropping_cover_legacy/">Intercropping overyielding under high inputs, and cover-crop legacies that flip sign by climate</a></li><li><a href="/songrove/s01_adulteration_risk_scoring/">Botanical adulteration risk scoring</a></li><li><a href="/songrove/s02_ashwagandha_label_gap/">Ashwagandha label claims</a></li><li><a href="/songrove/s03_herb_drying_eo_retention/">Herb drying</a></li><li><a href="/songrove/s04_saffron_fingerprinting/">Saffron provenance and adulteration fingerprinting</a></li><li><a href="/songrove/s05_hemp_thc_compliance/">Hemp &#x27;hot crop&#x27; risk</a></li><li><a href="/songrove/s06_cacao_cadmium_blending/">Cacao cadmium</a></li><li><a href="/songrove/s07_vanilla_price_quality/">Vanilla boom-bust</a></li><li><a href="/songrove/s08_postharvest_storage_roi/">Smallholder post-harvest loss</a></li><li><a href="/songrove/s09_index_insurance_basis_risk/">Index insurance basis risk</a></li><li><a href="/songrove/s10_soil_carbon_mrv_aggregation/">Soil-carbon MRV for smallholders</a></li></ul><h2>Concrete Mathematics</h2><ul><li><a href="/explainers/ch01_drug_dosing/">Dosing a drug on a schedule</a></li><li><a href="/explainers/ch01_fishery_quota/">Fishing to a fixed quota</a></li><li><a href="/explainers/ch01_lake_pollution/">Cleaning up a polluted lake</a></li><li><a href="/explainers/ch02_competition/">Competition: coexist or exclude?</a></li><li><a href="/explainers/ch02_tunnel_traffic/">The best speed through a tunnel</a></li><li><a href="/explainers/ch03_optimal_harvest/">Harvesting a fishery optimally</a></li><li><a href="/explainers/ch03_workers/">How many workers to hire</a></li><li><a href="/explainers/ch04_stopping_distance/">Does the stopping-distance model fit?</a></li><li><a href="/explainers/ch04_traffic_models/">Three traffic laws, one data set</a></li><li><a href="/explainers/ch05_extinction/">Why small populations die out</a></li><li><a href="/explainers/ch05_poisson_arrivals/">Random arrivals at the checkout</a></li><li><a href="/explainers/ch06_barber/">Should the barber hire an assistant?</a></li><li><a href="/explainers/ch06_checkout_lines/">How many checkouts to open</a></li><li><a href="/explainers/ch07_birds_and_worms/">Which worms should a bird eat?</a></li><li><a href="/explainers/ch07_machine_replacement/">When to replace a machine</a></li><li><a href="/explainers/ch08_queue_estimation/">How sure is the predicted wait?</a></li><li><a href="/explainers/ch08_sensitivity/">Which inputs matter most?</a></li><li><a href="/explainers/ch09_dimensional_analysis/">Dimensional analysis</a></li><li><a href="/explainers/ch09_yellow_light/">The yellow-light dilemma</a></li><li><a href="/explainers/ch10_logistic_map/">From order to chaos in one line</a></li><li><a href="/explainers/ch10_predator_prey/">Predators, prey and the paradox of enrichment</a></li><li><a href="/explainers/ch11_river_spill/">A spill drifting downstream</a></li><li><a href="/explainers/ch11_traffic_light/">The queue at a red light</a></li><li><a href="/explainers/ch12_forest_rotation/">When to cut the forest</a></li><li><a href="/explainers/ch12_linear_program/">The workshop&#x27;s product mix</a></li></ul></div></div></div>
+<script>
+(function () {
+  var root = document.getElementById('sgr-research');
+  if (!root || !window.fetch || !document.querySelector) return;
+  var base = root.getAttribute('data-src') || '';
+  var KEY = 'sgr-open-sections';
+  function load() { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }
+  function save(o) { try { localStorage.setItem(KEY, JSON.stringify(o)); } catch (e) {} }
+  function esc(s) { var d = document.createElement('div'); d.textContent = s == null ? '' : s; return d.innerHTML; }
+  var LABEL = { analysis: 'analyses', explainer: 'explainers', app: 'apps' };
+
+  fetch(base + '/index.json', { cache: 'no-cache' })
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(render)
+    .catch(function () { /* keep the fallback content */ });
+
+  function item(p, s, i) {
+    var badge = p.simulated ? '<span class="sgr-badge">Simulated</span>' : '';
+    var q = (p.title + ' ' + p.summary + ' ' + (p.group || '') + ' ' + s.label).toLowerCase();
+    var go = s.layout === 'tiles' ? 'Open →' : '→';
+    var cls = s.layout === 'tiles' ? 'sgr-tile' : 'sgr-row';
+    return '<a class="' + cls + '" href="' + base + p.url + '" data-q="' + esc(q) + '" style="--i:' + i + '">' +
+      '<span class="sgr-row-main"><span class="sgr-row-t">' + esc(p.title) + '</span>' +
+      '<span class="sgr-row-s">' + esc(p.summary) + '</span></span>' +
+      (s.layout === 'tiles' ? '' : '<span class="sgr-row-m">' + badge + '<span class="sgr-date">' + esc(p.date) +
+        '</span></span>') + '<span class="sgr-go" aria-hidden="true">' + go + '</span></a>';
+  }
+
+  function render(data) {
+    var open = load();
+    var secs = data.sections.filter(function (s) {
+      return data.pages.some(function (p) { return p.section === s.key; });
+    });
+    if (location.hash) { var h = location.hash.slice(1); if (secs.some(function (s) { return s.key === h; })) open[h] = true; }
+    var total = data.pages.length;
+    var out = '<div class="sgr-tools"><label class="sgr-search">' +
+      '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">' +
+      '<circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>' +
+      '<input type="search" placeholder="Search ' + total + ' pieces of research" aria-label="Search research"></label>' +
+      '<button type="button" class="sgr-btn sgr-all">Expand all</button></div>';
+    out += '<div class="sgr-chips">' + secs.map(function (s) {
+      var n = data.pages.filter(function (p) { return p.section === s.key; }).length;
+      return '<button type="button" class="sgr-chip" data-k="' + s.key + '" style="--a:' + s.accent + '"><i></i>' +
+        esc(s.label) + ' <b>' + n + '</b></button>';
+    }).join('') + '</div><p class="sgr-empty sgr-hide">No matches. Try another word.</p>';
+
+    out += secs.map(function (s) {
+      var items = data.pages.filter(function (p) { return p.section === s.key; });
+      var isOpen = !!open[s.key];
+      var body = '', group = null, i = 0;
+      if (s.hub) body += '<a class="sgr-hub" href="' + base + s.hub + '">Overview of all ' + items.length + ' →</a>';
+      if (s.layout === 'tiles') {
+        body += '<div class="sgr-tiles">' + items.map(function (p) { return item(p, s, i++); }).join('') + '</div>';
+      } else {
+        body += '<div class="sgr-list">';
+        items.forEach(function (p) {
+          if (p.group && p.group !== group) { group = p.group; body += '<div class="sgr-group">' + esc(group) + '</div>'; }
+          body += item(p, s, i++);
+        });
+        body += '</div>';
+      }
+      return '<section class="sgr-sec' + (isOpen ? ' open' : '') + '" id="' + s.key + '" data-k="' + s.key +
+        '" style="--a:' + s.accent + '">' +
+        '<button type="button" class="sgr-head" aria-expanded="' + isOpen + '" aria-controls="sgr-b-' + s.key + '">' +
+        '<span class="sgr-head-t"><span class="sgr-name">' + esc(s.label) + '</span>' +
+        '<span class="sgr-blurb">' + esc(s.blurb) + '</span></span>' +
+        '<span class="sgr-count" data-n="' + items.length + '">' + items.length + ' ' + (LABEL[s.kind] || 'items') +
+        '</span><span class="sgr-chev" aria-hidden="true"></span></button>' +
+        '<div class="sgr-body" id="sgr-b-' + s.key + '"' + (isOpen ? '' : ' inert') + '><div class="sgr-inner">' +
+        body + '</div></div></section>';
+    }).join('');
+    root.innerHTML = out;
+
+    var input = root.querySelector('input');
+    var allBtn = root.querySelector('.sgr-all');
+    var sections = [].slice.call(root.querySelectorAll('.sgr-sec'));
+    function setOpen(sec, on) {
+      sec.classList.toggle('open', on);
+      sec.querySelector('.sgr-head').setAttribute('aria-expanded', on);
+      var b = sec.querySelector('.sgr-body');
+      if (on) b.removeAttribute('inert'); else b.setAttribute('inert', '');
+    }
+    function syncAll() {
+      var allOpen = sections.every(function (s) { return s.classList.contains('open'); });
+      allBtn.textContent = allOpen ? 'Collapse all' : 'Expand all';
+    }
+    syncAll();
+
+    root.addEventListener('click', function (e) {
+      var head = e.target.closest('.sgr-head');
+      var chip = e.target.closest('.sgr-chip');
+      if (head) {
+        var sec = head.parentNode, on = !sec.classList.contains('open');
+        setOpen(sec, on);
+        if (!input.value) { open[sec.getAttribute('data-k')] = on; save(open); }
+        syncAll();
+      } else if (chip) {
+        var target = root.querySelector('.sgr-sec[data-k="' + chip.getAttribute('data-k') + '"]');
+        if (input.value) { input.value = ''; filter(); }
+        setOpen(target, true); open[target.getAttribute('data-k')] = true; save(open); syncAll();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else if (e.target === allBtn) {
+        var to = allBtn.textContent === 'Expand all';
+        sections.forEach(function (s) { setOpen(s, to); open[s.getAttribute('data-k')] = to; });
+        save(open); syncAll();
+      }
+    });
+
+    function filter() {
+      var words = input.value.toLowerCase().split(/\s+/).filter(Boolean);
+      var any = false;
+      sections.forEach(function (sec) {
+        var n = 0, rows = [].slice.call(sec.querySelectorAll('[data-q]'));
+        rows.forEach(function (r) {
+          var hit = words.every(function (w) { return r.getAttribute('data-q').indexOf(w) !== -1; });
+          r.classList.toggle('sgr-hide', !hit); if (hit) n++;
+        });
+        [].slice.call(sec.querySelectorAll('.sgr-group')).forEach(function (g) {
+          var el = g.nextElementSibling, vis = false;
+          while (el && !el.classList.contains('sgr-group')) { if (!el.classList.contains('sgr-hide')) vis = true; el = el.nextElementSibling; }
+          g.classList.toggle('sgr-hide', !vis);
+        });
+        var count = sec.querySelector('.sgr-count'), total = count.getAttribute('data-n');
+        var label = count.textContent.replace(/^[\d\s]+(of\s+\d+\s+)?/, '');
+        count.textContent = (words.length ? n + ' of ' + total : total) + ' ' + label;
+        sec.classList.toggle('sgr-hide', words.length > 0 && n === 0);
+        if (words.length) setOpen(sec, n > 0); else setOpen(sec, !!open[sec.getAttribute('data-k')]);
+        if (n) any = true;
+      });
+      root.querySelector('.sgr-empty').classList.toggle('sgr-hide', any || !words.length);
+      syncAll();
+    }
+    input.addEventListener('input', filter);
+  }
+})();
+</script>
 </main>
 <footer class="sgr-foot"><div class="in">© 2026 Stellar Grove ·
 <a href="https://www.stellargrove.com">stellargrove.com</a></div></footer>

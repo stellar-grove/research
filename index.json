@@ -4,19 +4,35 @@
  "sections": [
   {
    "key": "econ",
-   "label": "Economics"
+   "label": "Economics",
+   "blurb": "Real-data answers to live economic questions, from the Fed to tariffs.",
+   "kind": "analysis",
+   "layout": "list",
+   "accent": "#062F4F"
   },
   {
    "key": "baseball",
-   "label": "Baseball"
+   "label": "Baseball",
+   "blurb": "Front-office questions: player value, ticket pricing and in-game strategy.",
+   "kind": "analysis",
+   "layout": "list",
+   "accent": "#0D7A3C"
   },
   {
    "key": "songrove",
-   "label": "Songrove Botanicals"
+   "label": "Songrove Botanicals",
+   "blurb": "Case studies on crops, botanicals and their supply chains, built on simulated data.",
+   "kind": "analysis",
+   "layout": "list",
+   "accent": "#C8960C"
   },
   {
    "key": "explainers",
    "label": "Concrete Mathematics",
+   "blurb": "Interactive worked examples for every chapter of A Concrete Approach to Mathematical Modelling.",
+   "kind": "explainer",
+   "layout": "list",
+   "accent": "#0B3D63",
    "hub": "/explainers/"
   }
  ],
@@ -27,7 +43,9 @@
    "summary": "Much as Baumol predicted. Labor-intensive services have risen 3.3% a year on average, close to wage growth of 3.3%, while goods fell 0.2% a year. Since 2005 services have become 104% more expensive relative to goods.",
    "date": "2026-11-21",
    "url": "/econ/baumol/",
-   "simulated": false
+   "simulated": false,
+   "group": "",
+   "kind": "analysis"
   },
   {
    "section": "econ",
@@ -35,7 +53,9 @@
    "summary": "Only slowly, and only recently. Across 1990–2024 the poorest countries grew slightly faster than rich ones (slope -0.39), a half-life of about 163 years to close half the gap. Controlling for investment, population growth and schooling…",
    "date": "2026-11-21",
    "url": "/econ/convergence/",
-   "simulated": false
+   "simulated": false,
+   "group": "",
+   "kind": "analysis"
   },
   {
    "section": "econ",
@@ -43,7 +63,9 @@
    "summary": "Yes. By May 2021 the balanced-approach rule called for a funds rate more than a point above the actual one; the gap peaked at 9.1 points in March 2022, and policy stayed more than a point behind for 29 months. Today the rule says 4.57%…",
    "date": "2026-11-21",
    "url": "/econ/fed/",
-   "simulated": false
+   "simulated": false,
+   "group": "",
+   "kind": "analysis"
   },
   {
    "section": "econ",
@@ -51,7 +73,9 @@
    "summary": "Only briefly. Rises reach the pump a little faster at first (84% vs 72% after two weeks), but falls catch up by week four (83% vs 96%), and the four-week difference isn't statistically significant (p = 0.43) in any of the five…",
    "date": "2026-11-21",
    "url": "/econ/gasoline/",
-   "simulated": false
+   "simulated": false,
+   "group": "",
+   "kind": "analysis"
   },
   {
    "section": "econ",
@@ -59,7 +83,9 @@
    "summary": "The mortgage payment on the median new home now takes 27% of median household income, up from 22% in 2019 and 19% at the 2020 low. Rates at 7.19% (vs a 2.68% low) have slowed prices more than cut them: national prices are 2.1% over the…",
    "date": "2026-11-21",
    "url": "/econ/housing/",
-   "simulated": false
+   "simulated": false,
+   "group": "",
+   "kind": "analysis"
   },
   {
    "section": "econ",
@@ -67,7 +93,9 @@
    "summary": "Yes, so far. Job openings fell 41% from their March 2022 peak while unemployment rose only +0.5 points to 4.2%. With the pre-2020 trade-off (each 1% fall in openings came with a 1.25% rise in unemployment), a drop that large would have…",
    "date": "2026-11-21",
    "url": "/econ/labor/",
-   "simulated": false
+   "simulated": false,
+   "group": "",
+   "kind": "analysis"
   },
   {
    "section": "econ",
@@ -75,7 +103,9 @@
    "summary": "Merging Ardent and Brio would raise their prices about 7.1% and 8.2%. The standard simulation recovers that within 0.01 points, but only with properly instrumented demand: naive OLS demand predicts 8%/9%.",
    "date": "2026-11-21",
    "url": "/econ/merger_sim/",
-   "simulated": false
+   "simulated": false,
+   "group": "",
+   "kind": "analysis"
   },
   {
    "section": "econ",
@@ -83,7 +113,9 @@
    "summary": "No. Adding sentiment to a spending forecast makes its error 2.9% larger outside the pandemic months. Meanwhile sentiment has run far below what unemployment and inflation predict: -47 points today, a gap 5.3 times its usual size before…",
    "date": "2026-11-21",
    "url": "/econ/sentiment/",
-   "simulated": false
+   "simulated": false,
+   "group": "",
+   "kind": "analysis"
   },
   {
    "section": "econ",
@@ -91,7 +123,9 @@
    "summary": "Almost entirely U.S. buyers. Through the 2019–20 escalation, Chinese exporters' pre-tariff prices fell just 2.6% relative to other countries' (vs the months just before the tariffs), while the average tariff on Chinese goods rose about…",
    "date": "2026-11-21",
    "url": "/econ/tariffs/",
-   "simulated": false
+   "simulated": false,
+   "group": "",
+   "kind": "analysis"
   },
   {
    "section": "econ",
@@ -99,7 +133,9 @@
    "summary": "Useful, but far from infallible. Out of sample the spread separates months that are 12 months before a recession from the rest with an AUC of 0.69, and 4 of 5 completed inversions since 1982 were followed by a recession within two years.…",
    "date": "2026-11-21",
    "url": "/econ/yield_curve/",
-   "simulated": false
+   "simulated": false,
+   "group": "",
+   "kind": "analysis"
   },
   {
    "section": "baseball",
@@ -107,7 +143,9 @@
    "summary": "Elite starters barely move the gate. A home ace moves attendance +0.0%, an interval (-1.1% to +1.2%) that includes zero; a visiting ace moves attendance +1.1%, an interval (-0.2% to +2.3%) that includes zero. Fans buy the date, the…",
    "date": "2026-11-21",
    "url": "/baseball/ace_effect/",
-   "simulated": false
+   "simulated": false,
+   "group": "",
+   "kind": "analysis"
   },
   {
    "section": "baseball",
@@ -115,7 +153,9 @@
    "summary": "Hitters peak around 24–25 and decline steadily after. The same .360 bat is worth about 17.1 WAR over five years if signed at 27, 15.6 at 30 and 14.2 at 33.",
    "date": "2026-11-21",
    "url": "/baseball/aging_curves/",
-   "simulated": false
+   "simulated": false,
+   "group": "",
+   "kind": "analysis"
   },
   {
    "section": "baseball",
@@ -123,7 +163,9 @@
    "summary": "The 2023 rules turned the running game back on: attempts jumped from 1.36 to 1.88 a game by 2024 and success from 75% to 80%. At 77% in 2026, league runners still beat the 65%–74% break-even for the most common steal (second base, 0–1…",
    "date": "2026-11-21",
    "url": "/baseball/baserunning/",
-   "simulated": false
+   "simulated": false,
+   "group": "",
+   "kind": "analysis"
   },
   {
    "section": "baseball",
@@ -131,7 +173,9 @@
    "summary": "Contact quality is a better guide to next season than results: xwOBA out-predicted actual wOBA in 2 of 3 test seasons. The blend flags J.T. Realmuto as the top buy-low bat (contact quality adds +.021 to his 2027 projection) and Jonny…",
    "date": "2026-11-21",
    "url": "/baseball/buy_low_sell_high/",
-   "simulated": false
+   "simulated": false,
+   "group": "",
+   "kind": "analysis"
   },
   {
    "section": "baseball",
@@ -139,7 +183,9 @@
    "summary": "Framing is a real, repeatable skill worth a lot of runs. Austin Wells saved his pitchers about 10 runs in 2026; Logan O'Hoppe cost his 9. The year-to-year correlation in framing rate is 0.43.",
    "date": "2026-11-21",
    "url": "/baseball/catcher_framing/",
-   "simulated": false
+   "simulated": false,
+   "group": "",
+   "kind": "analysis"
   },
   {
    "section": "baseball",
@@ -147,7 +193,9 @@
    "summary": "Postgame concert nights draw the biggest real lift, about 21% (~6,198 fans a game), after comparing each game with the same club's other games. Raw comparisons overstate most promotions because clubs schedule them on nights that sell…",
    "date": "2026-11-21",
    "url": "/baseball/promotion_roi/",
-   "simulated": false
+   "simulated": false,
+   "group": "",
+   "kind": "analysis"
   },
   {
    "section": "baseball",
@@ -155,7 +203,9 @@
    "summary": "Banning the shift raised formerly shifted hitters' hit rate on grounders and low liners by about +36 points in 2023 relative to everyone else (95% CI +21 to +51): roughly 5 extra hits a season. By 2026 the edge is +28 points as defenses…",
    "date": "2026-11-21",
    "url": "/baseball/shift_ban/",
-   "simulated": false
+   "simulated": false,
+   "group": "",
+   "kind": "analysis"
   },
   {
    "section": "baseball",
@@ -163,7 +213,9 @@
    "summary": "The same starter allows about +17 points more wOBA the third time through the order than the first, after adjusting for who's batting. Leaving a middle starter in for a third look instead of going to an average reliever costs about 0.14…",
    "date": "2026-11-21",
    "url": "/baseball/starter_hook/",
-   "simulated": false
+   "simulated": false,
+   "group": "",
+   "kind": "analysis"
   },
   {
    "section": "baseball",
@@ -171,7 +223,9 @@
    "summary": "A pitch's raw traits alone predict a pitcher's future better than his results do: first-half Stuff+ correlates 0.35 with second-half run prevention, vs 0.15 for first-half results. Top pitch of 2026: Tyler Rogers's sinker (Stuff+ 124).",
    "date": "2026-11-21",
    "url": "/baseball/stuff_plus/",
-   "simulated": false
+   "simulated": false,
+   "group": "",
+   "kind": "analysis"
   },
   {
    "section": "baseball",
@@ -179,7 +233,9 @@
    "summary": "Ticket usage is the tell: every 10 points of scan rate lost raises the odds of leaving by about 27%. But the accounts most likely to leave aren't the best ones to spend offers on: targeting by expected net value instead of raw churn risk…",
    "date": "2026-11-21",
    "url": "/baseball/ticket_churn/",
-   "simulated": true
+   "simulated": true,
+   "group": "",
+   "kind": "analysis"
   },
   {
    "section": "baseball",
@@ -187,7 +243,9 @@
    "summary": "In this simulated club, pricing each section to its measured price sensitivity lifts game-day revenue +25.4% over current pricing, mostly by filling empty seats (the park runs 61% full today). Using naive elasticities instead changes…",
    "date": "2026-11-21",
    "url": "/baseball/ticket_pricing/",
-   "simulated": true
+   "simulated": true,
+   "group": "",
+   "kind": "analysis"
   },
   {
    "section": "baseball",
@@ -195,7 +253,9 @@
    "summary": "One extra win brings about 13,672 more home fans this season and 5,131 next season: roughly $1.41M of gate revenue at $75 a fan. That's a fraction of the commonly cited $8–10M free-agent price of a win, so gate alone never justifies a…",
    "date": "2026-11-21",
    "url": "/baseball/win_value/",
-   "simulated": false
+   "simulated": false,
+   "group": "",
+   "kind": "analysis"
   },
   {
    "section": "songrove",
@@ -203,7 +263,9 @@
    "summary": "Out-of-spec phenolic batches are forecastable before harvest (AUC 0.96 on held-out seasons), but most of that skill is species and farm (baseline AUC 0.94); drought is the climate signal worth watching.",
    "date": "2026-11-21",
    "url": "/songrove/b01_phytochemical_potency_drift/",
-   "simulated": true
+   "simulated": true,
+   "group": "Biophysical",
+   "kind": "analysis"
   },
   {
    "section": "songrove",
@@ -211,7 +273,9 @@
    "summary": "At a realistic 20 t/ha dose the removal signal (~0.4 t CO2/ha/yr) is smaller than core-to-core noise; verification is a question of how many fields you sample, not how many cores you take in each.",
    "date": "2026-11-21",
    "url": "/songrove/b02_erw_mrv_detection/",
-   "simulated": true
+   "simulated": true,
+   "group": "Biophysical",
+   "kind": "analysis"
   },
   {
    "section": "songrove",
@@ -219,7 +283,9 @@
    "summary": "Microclimate benefits reverse beyond ~1.9 ha, and shade tolerance ranges from 10% PAR reduction (maize) to 44% (fruit & berries) for a ≤10% yield penalty — siting should match crop to panel density.",
    "date": "2026-11-21",
    "url": "/songrove/b03_agrivoltaics_tipping_point/",
-   "simulated": true
+   "simulated": true,
+   "group": "Biophysical",
+   "kind": "analysis"
   },
   {
    "section": "songrove",
@@ -227,7 +293,9 @@
    "summary": "Night heat is ~2.9× as damaging to rice chalkiness as day heat per °C, and a +2 °C season costs ~6% head rice; a tolerant line halves the night penalty.",
    "date": "2026-11-21",
    "url": "/songrove/b04_hnt_rice_chalkiness/",
-   "simulated": true
+   "simulated": true,
+   "group": "Biophysical",
+   "kind": "analysis"
   },
   {
    "section": "songrove",
@@ -235,7 +303,9 @@
    "summary": "Recovered thresholds match Guan et al. (viability 32.5 °C / 0.85 kPa); at +2 °C the share of anthesis days losing > 25% viability rises from 43% to 67%, and dry sites carry most of it.",
    "date": "2026-11-21",
    "url": "/songrove/b05_maize_pollen_heat_vpd/",
-   "simulated": true
+   "simulated": true,
+   "group": "Biophysical",
+   "kind": "analysis"
   },
   {
    "section": "songrove",
@@ -243,7 +313,9 @@
    "summary": "Elevated CO2 dilutes zinc by ~8% in C3 staples, pushing ~48,000 more people per million below their zinc requirement in a C3-staple population.",
    "date": "2026-11-21",
    "url": "/songrove/b06_co2_nutrient_dilution/",
-   "simulated": true
+   "simulated": true,
+   "group": "Biophysical",
+   "kind": "analysis"
   },
   {
    "section": "songrove",
@@ -251,7 +323,9 @@
    "summary": "AWD cuts CH4 ~51% while N2O rises ~41%; the N2O penalty is real on acid, warm soils but never erodes the net benefit below a 19% CO2e cut in the modelled range.",
    "date": "2026-11-21",
    "url": "/songrove/b07_rice_awd_tradeoff/",
-   "simulated": true
+   "simulated": true,
+   "group": "Biophysical",
+   "kind": "analysis"
   },
   {
    "section": "songrove",
@@ -259,7 +333,9 @@
    "summary": "25/32 crops are pollination-limited; in those, more bee visits could close ~60% of the yield gap to top farms, concentrated in the most pollinator-dependent crops.",
    "date": "2026-11-21",
    "url": "/songrove/b08_pollinator_limited_yield/",
-   "simulated": true
+   "simulated": true,
+   "group": "Biophysical",
+   "kind": "analysis"
   },
   {
    "section": "songrove",
@@ -267,7 +343,9 @@
    "summary": "Inoculants average 0.7% in the field vs a 15% claim, but the response is predictable from SOM, pH and P: targeting lifts net return from $-24 to $12/ha.",
    "date": "2026-11-21",
    "url": "/songrove/b09_inoculant_efficacy_gap/",
-   "simulated": true
+   "simulated": true,
+   "group": "Biophysical",
+   "kind": "analysis"
   },
   {
    "section": "songrove",
@@ -275,7 +353,9 @@
    "summary": "Intercropping's land advantage erodes by 0.15 LER per 100 kg N, and cover-crop legacies range from +14% (tropical) to -11% (dry): intercrops pay most in low-input systems, cover crops where water is not limiting.",
    "date": "2026-11-21",
    "url": "/songrove/b10_intercropping_cover_legacy/",
-   "simulated": true
+   "simulated": true,
+   "group": "Biophysical",
+   "kind": "analysis"
   },
   {
    "section": "songrove",
@@ -283,7 +363,9 @@
    "summary": "A price-and-supplier risk score (AUC 0.77) plus tiered testing (Risk-tiered: HPTLC all, HPLC-MS top 25%) is the cheapest policy at $302/lot; published prevalence figures overstate a controlled supply chain.",
    "date": "2026-11-21",
    "url": "/songrove/s01_adulteration_risk_scoring/",
-   "simulated": true
+   "simulated": true,
+   "group": "Botanicals & socioeconomic",
+   "kind": "analysis"
   },
   {
    "section": "songrove",
@@ -291,7 +373,9 @@
    "summary": "Ashwagandha labels overstate HPLC withanolides ~11×, and ~94% of that gap is the assay definition, not the plant: specs should name the method, not just a percentage.",
    "date": "2026-11-21",
    "url": "/songrove/s02_ashwagandha_label_gap/",
-   "simulated": true
+   "simulated": true,
+   "group": "Botanicals & socioeconomic",
+   "kind": "analysis"
   },
   {
    "section": "songrove",
@@ -299,7 +383,9 @@
    "summary": "Optimal drying temperatures recovered for all three herbs (oregano 39 °C, sage 45 °C, peppermint 38 °C); a shared 39 °C setpoint costs at most 4% quality, while running hot (55 °C) costs peppermint 68%.",
    "date": "2026-11-21",
    "url": "/songrove/s03_herb_drying_eo_retention/",
-   "simulated": true
+   "simulated": true,
+   "group": "Botanicals & socioeconomic",
+   "kind": "analysis"
   },
   {
    "section": "songrove",
@@ -307,7 +393,9 @@
    "summary": "Isotopes + elements identify origin (88% cross-validated) while metabolomics tracks harvest year; turmeric and paprika are caught at ~6–9% w/w, safflower only at ~14%.",
    "date": "2026-11-21",
    "url": "/songrove/s04_saffron_fingerprinting/",
-   "simulated": true
+   "simulated": true,
+   "group": "Botanicals & socioeconomic",
+   "kind": "analysis"
   },
   {
    "section": "songrove",
@@ -315,7 +403,9 @@
    "summary": "High-CBD hemp should be sampled by ~day 43 after floral initiation (others by ~day 46) to keep failure risk under 5%; late-season samples fail 29% of the time.",
    "date": "2026-11-21",
    "url": "/songrove/s05_hemp_thc_compliance/",
-   "simulated": true
+   "simulated": true,
+   "group": "Botanicals & socioeconomic",
+   "kind": "analysis"
   },
   {
    "section": "songrove",
@@ -323,7 +413,9 @@
    "summary": "Blending lots to product-level EU limits with 25% headroom buys 100% of demand and cuts unsold lots from 42% to 28%; the planned 15% headroom would fail ~15% of product tests.",
    "date": "2026-11-21",
    "url": "/songrove/s06_cacao_cadmium_blending/",
-   "simulated": true
+   "simulated": true,
+   "group": "Botanicals & socioeconomic",
+   "kind": "analysis"
   },
   {
    "section": "songrove",
@@ -331,7 +423,9 @@
    "summary": "Price spikes lower vanillin through early harvest and quick curing (-0.54 pts for a +$400/kg boom); early harvest is the larger channel per dollar, quick curing the biggest per-lot penalty (-0.35 pts), and theft pressure adds early picking…",
    "date": "2026-11-21",
    "url": "/songrove/s07_vanilla_price_quality/",
-   "simulated": true
+   "simulated": true,
+   "group": "Botanicals & socioeconomic",
+   "kind": "analysis"
   },
   {
    "section": "songrove",
@@ -339,7 +433,9 @@
    "summary": "Hermetic bags cut storage loss ~7 pp (ITT) with a median 3× benefit/cost; a naive TWFE understates the effect by 7% under staggered adoption.",
    "date": "2026-11-21",
    "url": "/songrove/s08_postharvest_storage_roi/",
-   "simulated": true
+   "simulated": true,
+   "group": "Botanicals & socioeconomic",
+   "kind": "analysis"
   },
   {
    "section": "songrove",
@@ -347,7 +443,9 @@
    "summary": "A satellite index leaves 35% of severe farm losses unpaid (crop-model hybrid 30%); the cover only beats no insurance for a CRRA-2 farmer if premium loading stays below ~27% (satellite) to ~54% (area-yield).",
    "date": "2026-11-21",
    "url": "/songrove/s09_index_insurance_basis_risk/",
-   "simulated": true
+   "simulated": true,
+   "group": "Botanicals & socioeconomic",
+   "kind": "analysis"
   },
   {
    "section": "songrove",
@@ -355,7 +453,9 @@
    "summary": "Individual smallholder soil-carbon payments are within ±20% only 19% of the time; groups of ≥2500 plots with a 60-plot reference-lab check reach 90%, and without bias calibration grouping alone never gets there.",
    "date": "2026-11-21",
    "url": "/songrove/s10_soil_carbon_mrv_aggregation/",
-   "simulated": true
+   "simulated": true,
+   "group": "Botanicals & socioeconomic",
+   "kind": "analysis"
   },
   {
    "section": "explainers",
@@ -363,7 +463,9 @@
    "summary": "For a drug with a 6-hour half-life and a window of 10–25 mg/L, doses can be at most 7.9 hours apart. On a 6-hourly schedule a dose of 12.5 mg/L settles at 12.5–25.0 mg/L, and a loading dose gets there from the first dose.",
    "date": "2026-11-23",
    "url": "/explainers/ch01_drug_dosing/",
-   "simulated": false
+   "simulated": false,
+   "group": "Chapter 1 · Growth and decay: dynamical systems",
+   "kind": "explainer"
   },
   {
    "section": "explainers",
@@ -371,7 +473,9 @@
    "summary": "The stock can sustain at most 12.5 thousand tonnes a year. A quota of 10 is safe while the stock stays above 28; a quota of 13, just 4% over the maximum, wipes the fishery out in 51 years.",
    "date": "2026-11-23",
    "url": "/explainers/ch01_fishery_quota/",
-   "simulated": false
+   "simulated": false,
+   "group": "Chapter 1 · Growth and decay: dynamical systems",
+   "kind": "explainer"
   },
   {
    "section": "explainers",
@@ -379,7 +483,9 @@
    "summary": "With the discharge stopped, the lake falls from 20 to 5 µg/L in 6.2 years. If the inflow is only cut to 6 µg/L, it never gets there.",
    "date": "2026-11-23",
    "url": "/explainers/ch01_lake_pollution/",
-   "simulated": false
+   "simulated": false,
+   "group": "Chapter 1 · Growth and decay: dynamical systems",
+   "kind": "explainer"
   },
   {
    "section": "explainers",
@@ -387,7 +493,9 @@
    "summary": "Both species survive when each limits itself more than it limits its rival. With competition coefficients 0.5 and 0.6, they settle at 86 and 29, a stable node. Make the effects strong both ways and the starting numbers decide the winner.",
    "date": "2026-11-23",
    "url": "/explainers/ch02_competition/",
-   "simulated": false
+   "simulated": false,
+   "group": "Chapter 2 · Equilibrium",
+   "kind": "explainer"
   },
   {
    "section": "explainers",
@@ -395,7 +503,9 @@
    "summary": "Throughput peaks at a surprisingly low 31 km/h (19 mph), carrying 1,491 cars an hour per lane. Greenberg's classic fit to Lincoln Tunnel data puts the best speed at 17.2 mph and capacity at 1,443 an hour: nearly the same answer, from data.",
    "date": "2026-11-23",
    "url": "/explainers/ch02_tunnel_traffic/",
-   "simulated": false
+   "simulated": false,
+   "group": "Chapter 2 · Equilibrium",
+   "kind": "explainer"
   },
   {
    "section": "explainers",
@@ -403,7 +513,9 @@
    "summary": "At a 5% discount rate the owner should hold the stock at 56.8 thousand tonnes, above the maximum-yield level of 50 and far above the 20 that open access drives it to, and get there by fishing flat out for 1.1 years.",
    "date": "2026-11-23",
    "url": "/explainers/ch03_optimal_harvest/",
-   "simulated": false
+   "simulated": false,
+   "group": "Chapter 3 · Optimal control and utility",
+   "kind": "explainer"
   },
   {
    "section": "explainers",
@@ -411,7 +523,9 @@
    "summary": "Hire until the last worker's output is worth exactly the wage: 100 workers. A 10% pay rise cuts that to 79, a 21% drop, because labour demand has elasticity -2.5 when labour's share is 0.6.",
    "date": "2026-11-23",
    "url": "/explainers/ch03_workers/",
-   "simulated": false
+   "simulated": false,
+   "group": "Chapter 3 · Optimal control and utility",
+   "kind": "explainer"
   },
   {
    "section": "explainers",
@@ -419,7 +533,9 @@
    "summary": "The physics model fits the 50 cars better than a straight line (Akaike weight 0.76), and its fitted reaction time, 0.84 s, is plausible. Accept it, with modest confidence.",
    "date": "2026-11-23",
    "url": "/explainers/ch04_stopping_distance/",
-   "simulated": false
+   "simulated": false,
+   "group": "Chapter 4 · Validation: accept, improve, or reject",
+   "kind": "explainer"
   },
   {
    "section": "explainers",
@@ -427,7 +543,9 @@
    "summary": "All three laws track the data closely (R² 0.91–0.99), yet AIC picks Greenberg decisively (weight 1.00), and residual patterns rule out the straight line. The choice matters: predicted lane capacity ranges from 1,442 to 1,693 vehicles an…",
    "date": "2026-11-23",
    "url": "/explainers/ch04_traffic_models/",
-   "simulated": false
+   "simulated": false,
+   "group": "Chapter 4 · Validation: accept, improve, or reject",
+   "kind": "explainer"
   },
   {
    "section": "explainers",
@@ -435,7 +553,9 @@
    "summary": "With 25% more births than deaths, a colony of 5 still dies out with probability 33%. Getting that risk under 5% takes 14 founders.",
    "date": "2026-11-23",
    "url": "/explainers/ch05_extinction/",
-   "simulated": false
+   "simulated": false,
+   "group": "Chapter 5 · Birth and death: probabilistic dynamics",
+   "kind": "explainer"
   },
   {
    "section": "explainers",
@@ -443,7 +563,9 @@
    "summary": "Even at a steady average of 1.8 a minute, 17% of minutes see nobody and 4% see five or more. One simulated day pins the rate to 1.84 (1.72–1.96), and the Poisson shape fits (p = 0.65).",
    "date": "2026-11-23",
    "url": "/explainers/ch05_poisson_arrivals/",
-   "simulated": false
+   "simulated": false,
+   "group": "Chapter 5 · Birth and death: probabilistic dynamics",
+   "kind": "explainer"
   },
   {
    "section": "explainers",
@@ -451,7 +573,9 @@
    "summary": "Alone, the barber turns away 38% of customers. An assistant cuts that to 9%, adding 0.90 haircuts an hour worth $22.41, against a $30 wage: don't hire (net −$7.59 an hour).",
    "date": "2026-11-23",
    "url": "/explainers/ch06_barber/",
-   "simulated": false
+   "simulated": false,
+   "group": "Chapter 6 · Stationary distributions",
+   "kind": "explainer"
   },
   {
    "section": "explainers",
@@ -459,7 +583,9 @@
    "summary": "The work needs 3.6 cashiers on average, but 4 lanes leave customers waiting 3.9 minutes on average. Opening one more cuts that to 0.6; meeting '80% start within 2 minutes' takes 5 lanes.",
    "date": "2026-11-23",
    "url": "/explainers/ch06_checkout_lines/",
-   "simulated": false
+   "simulated": false,
+   "group": "Chapter 6 · Stationary distributions",
+   "kind": "explainer"
   },
   {
    "section": "explainers",
@@ -467,7 +593,9 @@
    "summary": "Rank worms by energy per second of handling: big worms (5 J/s) beat small ones (2 J/s). The bird should still eat small worms now, and ignore them once big worms are met more than 0.083 times a second, however many small worms there are.",
    "date": "2026-11-23",
    "url": "/explainers/ch07_birds_and_worms/",
-   "simulated": false
+   "simulated": false,
+   "group": "Chapter 7 · Optimal decision and reward",
+   "kind": "explainer"
   },
   {
    "section": "explainers",
@@ -475,7 +603,9 @@
    "summary": "Replace the machine once it reaches condition 4 of 9. That rule cuts the discounted cost of a new machine by 65% compared with running it into the ground, and averages 8.88 per period in the long run.",
    "date": "2026-11-23",
    "url": "/explainers/ch07_machine_replacement/",
-   "simulated": false
+   "simulated": false,
+   "group": "Chapter 7 · Optimal decision and reward",
+   "kind": "explainer"
   },
   {
    "section": "explainers",
@@ -483,7 +613,9 @@
    "summary": "Rates estimated to within about ±16% give a predicted wait of 2.7 minutes, but the 95% interval runs from 1.4 to 6 minutes: each 1% error in λ moves the wait by 2.4%, and that multiplier explodes as utilisation nears 1.",
    "date": "2026-11-23",
    "url": "/explainers/ch08_queue_estimation/",
-   "simulated": false
+   "simulated": false,
+   "group": "Chapter 8 · Using a model: choice and estimation",
+   "kind": "explainer"
   },
   {
    "section": "explainers",
@@ -491,7 +623,9 @@
    "summary": "Flow and volume matter one-for-one (elasticities -1.0 and +1.0). The target and the inflow level matter less today (-0.80, +0.13), but the inflow's influence grows 11-fold as it nears the target.",
    "date": "2026-11-23",
    "url": "/explainers/ch08_sensitivity/",
-   "simulated": false
+   "simulated": false,
+   "group": "Chapter 8 · Using a model: choice and estimation",
+   "kind": "explainer"
   },
   {
    "section": "explainers",
@@ -499,7 +633,9 @@
    "summary": "Units alone force the period of a pendulum to be T = C\\sqrt{l/g}: mass cannot matter, and doubling the length multiplies the period by √2. The experiment then only has to find one number, C\\sqrt{g} = 6.26 (theory: 2π = 6.28).",
    "date": "2026-11-23",
    "url": "/explainers/ch09_dimensional_analysis/",
-   "simulated": false
+   "simulated": false,
+   "group": "Chapter 9 · Building a model: adapting, extending, and combining",
+   "kind": "explainer"
   },
   {
    "section": "explainers",
@@ -507,7 +643,9 @@
    "summary": "At 60 km/h with a 3-second amber, a driver between 25 m and 63 m from the line can do neither: a 38 m dilemma zone. Removing it takes an amber of 5.3 s at this speed.",
    "date": "2026-11-23",
    "url": "/explainers/ch09_yellow_light/",
-   "simulated": false
+   "simulated": false,
+   "group": "Chapter 9 · Building a model: adapting, extending, and combining",
+   "kind": "explainer"
   },
   {
    "section": "explainers",
@@ -515,7 +653,9 @@
    "summary": "As the growth rate r rises the population goes from steady, to alternating every other year at r = 3, to 4-, 8-, 16-year cycles, and into chaos past r ≈ 3.5700. At r = 3.9 two populations differing by one part in 100 million disagree…",
    "date": "2026-11-23",
    "url": "/explainers/ch10_logistic_map/",
-   "simulated": false
+   "simulated": false,
+   "group": "Chapter 10 · Further dynamical systems",
+   "kind": "explainer"
   },
   {
    "section": "explainers",
@@ -523,7 +663,9 @@
    "summary": "Below a carrying capacity of 3.0 the populations settle down; above it the equilibrium turns into an unstable spiral and the system locks onto a limit cycle. At K = 5 prey swing between 0.0027 and 3.56 every 25 time units.",
    "date": "2026-11-23",
    "url": "/explainers/ch10_predator_prey/",
-   "simulated": false
+   "simulated": false,
+   "group": "Chapter 10 · Further dynamical systems",
+   "kind": "explainer"
   },
   {
    "section": "explainers",
@@ -531,7 +673,9 @@
    "summary": "The pollution peaks at the intake 5.5 hours after the spill, at 3.89 mg/L, 78 times the 0.05 mg/L limit. The intake should close for about 3.6 hours (4.0 to 7.6 h after the spill).",
    "date": "2026-11-23",
    "url": "/explainers/ch11_river_spill/",
-   "simulated": false
+   "simulated": false,
+   "group": "Chapter 11 · Further flow and diffusion",
+   "kind": "explainer"
   },
   {
    "section": "explainers",
@@ -539,7 +683,9 @@
    "summary": "During a 45 s red, the back of the queue moves upstream at 3 m/s even though every car moves forward or stands still. It keeps growing after green, peaking at 169 m, and needs 80 s of green to clear completely.",
    "date": "2026-11-23",
    "url": "/explainers/ch11_traffic_light/",
-   "simulated": false
+   "simulated": false,
+   "group": "Chapter 11 · Further flow and diffusion",
+   "kind": "explainer"
   },
   {
    "section": "explainers",
@@ -547,7 +693,9 @@
    "summary": "At a 3% interest rate, cut every 36 years (Faustmann), not at the 48 years that maximise timber yield. Waiting for maximum yield would cost 10% of the land's value; ignoring the next crop (cutting at 43) costs 4%.",
    "date": "2026-11-23",
    "url": "/explainers/ch12_forest_rotation/",
-   "simulated": false
+   "simulated": false,
+   "group": "Chapter 12 · Further optimization",
+   "kind": "explainer"
   },
   {
    "section": "explainers",
@@ -555,7 +703,9 @@
    "summary": "Make 20 tables and 60 chairs for $1,800 a week. An extra carpentry hour is worth $10, an extra finishing hour $10, and more chair demand $0: that constraint has 10 chairs of slack.",
    "date": "2026-11-23",
    "url": "/explainers/ch12_linear_program/",
-   "simulated": false
+   "simulated": false,
+   "group": "Chapter 12 · Further optimization",
+   "kind": "explainer"
   }
  ]
 }
