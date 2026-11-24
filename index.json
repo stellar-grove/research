@@ -1,6 +1,6 @@
 {
  "site": "https://research.stellargrove.com",
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "sections": [
   {
    "key": "econ",
@@ -34,6 +34,14 @@
    "layout": "list",
    "accent": "#0B3D63",
    "hub": "/explainers/"
+  },
+  {
+   "key": "hospital",
+   "label": "Hospital Operations",
+   "blurb": "A simulated health system: census forecasting, early-warning monitoring and operating margin.",
+   "kind": "analysis",
+   "layout": "list",
+   "accent": "#A54A28"
   }
  ],
  "pages": [
@@ -706,6 +714,16 @@
    "simulated": false,
    "group": "Chapter 12 · Further optimization",
    "kind": "explainer"
+  },
+  {
+   "section": "hospital",
+   "title": "Hospital command center: census, early warning and margin in a simulated health system",
+   "summary": "Calloway Bay's main campus runs at 78% occupancy in a normal week, but its medicine floors run at 94%. A respiratory surge is the hardest week: the median peak reaches 88% and the main ED spends 58 h on diversion. Continuous monitoring…",
+   "date": "2026-11-23",
+   "url": "/hospital/command_center/",
+   "simulated": true,
+   "group": "",
+   "kind": "analysis"
   }
  ]
 }
