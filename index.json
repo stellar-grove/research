@@ -24,7 +24,8 @@
    "blurb": "Case studies on crops, botanicals and their supply chains, built on simulated data.",
    "kind": "analysis",
    "layout": "list",
-   "accent": "#C8960C"
+   "accent": "#C8960C",
+   "unlisted": true
   },
   {
    "key": "explainers",

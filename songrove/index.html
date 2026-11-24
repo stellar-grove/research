@@ -150,6 +150,11 @@ body{margin:0;background:#fff;color:#0D1C24;font-family:'Montserrat',system-ui,-
 
   function render(data) {
     var open = load();
+    if (!focused) {
+      var shown = data.sections.filter(function (s) { return !s.unlisted; }).map(function (s) { return s.key; });
+      data.sections = data.sections.filter(function (s) { return !s.unlisted; });
+      data.pages = data.pages.filter(function (p) { return shown.indexOf(p.section) !== -1; });
+    }
     if (focused) {
       data.sections = data.sections.filter(function (s) { return only.indexOf(s.key) !== -1; });
       data.pages = data.pages.filter(function (p) { return only.indexOf(p.section) !== -1; });
