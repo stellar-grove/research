@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Songrove Botanicals · Stellar Grove Research</title>
+<meta name="description" content="Case studies on crops, botanicals and their supply chains, built on simulated data.">
+<link rel="canonical" href="https://research.stellargrove.com/songrove/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Stellar Grove Research">
+<meta property="og:title" content="Songrove Botanicals">
+<meta property="og:description" content="Case studies on crops, botanicals and their supply chains, built on simulated data.">
+<meta property="og:url" content="https://research.stellargrove.com/songrove/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Roboto+Slab:wght@300;400&display=swap">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#fff;color:#0D1C24;font-family:'Montserrat',system-ui,-apple-system,'Segoe UI',sans-serif}
+.sgr-top{background:#062F4F;color:#fff}
+.sgr-top .in{max-width:1040px;margin:0 auto;padding:.85rem 1.25rem;display:flex;gap:.4rem 1rem;align-items:baseline;
+  justify-content:space-between;flex-wrap:wrap}
+.sgr-brand{font-family:'Roboto Slab',Georgia,serif;font-weight:300;font-size:1.25rem;color:#fff;text-decoration:none}
+.sgr-brand span{color:#F2D15C}
+.sgr-nav a{color:#D5DEE3;text-decoration:none;font-size:.9rem;margin-right:1.1rem}
+.sgr-nav a:last-child{margin-right:0}
+.sgr-nav a:hover,.sgr-brand:hover{text-decoration:underline}
+.sgr-main{padding:2rem 1.25rem 3rem}
+.sgr-hero{max-width:1040px;margin:0 auto 1.5rem}
+.sgr-hero h1{font-family:'Roboto Slab',Georgia,serif;font-weight:300;color:#062F4F;font-size:2.1rem;margin:0 0 .4rem}
+.sgr-hero p{color:#4A5E6D;margin:0;max-width:720px;line-height:1.6}
+.sgr-foot{border-top:1px solid #D5DEE3;color:#4A5E6D;font-size:.85rem}
+.sgr-foot .in{max-width:1040px;margin:0 auto;padding:1.25rem}
+.sgr-foot a{color:#0D7A3C}
+</style>
+</head>
+<body>
+<header class="sgr-top"><div class="in">
+<a class="sgr-brand" href="/">Stellar Grove <span>·</span> Research</a>
+<nav class="sgr-nav"><a href="/">All research</a><a href="https://www.stellargrove.com">stellargrove.com</a></nav>
+</div></header>
+<main class="sgr-main">
+<div class="sgr-hero"><h1>Songrove Botanicals</h1><p>Case studies on crops, botanicals and their supply chains, built on simulated data.</p><p><a href="/">← All research</a></p></div><style>
+.sgr-idx{max-width:1040px;margin:0 auto;font-family:'Montserrat',system-ui,-apple-system,'Segoe UI',sans-serif;
+  color:#0D1C24;--sgr-ease:cubic-bezier(.2,.7,.2,1)}
+.sgr-idx *{box-sizing:border-box}
+.sgr-tools{display:flex;gap:.75rem;align-items:center;flex-wrap:wrap;margin:0 0 1.25rem}
+.sgr-search{flex:1 1 280px;display:flex;align-items:center;gap:.6rem;border:1px solid #D5DEE3;border-radius:999px;
+  padding:.55rem 1rem;background:#fff;transition:border-color .2s,box-shadow .2s}
+.sgr-search:focus-within{border-color:#0D7A3C;box-shadow:0 0 0 3px rgba(13,122,60,.15)}
+.sgr-search svg{flex:none;color:#4A5E6D}
+.sgr-search input{border:0;outline:0;font:inherit;font-size:.95rem;width:100%;background:transparent;color:inherit;
+  padding:0;margin:0}
+.sgr-btn{font:500 .85rem 'Montserrat',sans-serif;border:1px solid #D5DEE3;background:#fff;color:#062F4F;
+  border-radius:999px;padding:.55rem 1rem;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.sgr-btn:hover{background:#062F4F;border-color:#062F4F;color:#fff}
+.sgr-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin:0 0 1.5rem}
+.sgr-chip{font:500 .8rem 'Montserrat',sans-serif;border:0;border-radius:999px;padding:.35rem .8rem;cursor:pointer;
+  background:#EEF2F1;color:#062F4F;display:inline-flex;gap:.45rem;align-items:center;transition:transform .15s}
+.sgr-chip:hover{transform:translateY(-1px)}
+.sgr-chip i{width:.55rem;height:.55rem;border-radius:50%;background:var(--a);display:inline-block}
+.sgr-chip b{font-weight:600;color:#4A5E6D}
+.sgr-empty{color:#4A5E6D;padding:1rem 0}
+.sgr-sec{border:1px solid #D5DEE3;border-radius:10px;margin:0 0 .85rem;background:#fff;overflow:hidden;
+  border-left:4px solid var(--a);transition:box-shadow .25s}
+.sgr-sec.open{box-shadow:0 6px 24px rgba(6,47,79,.08)}
+.sgr-head{all:unset;box-sizing:border-box;width:100%;display:flex;align-items:center;gap:1rem;cursor:pointer;
+  padding:1.05rem 1.25rem;transition:background .2s}
+.sgr-head:hover{background:#F6F8F8}
+.sgr-head:focus-visible{outline:2px solid #0D7A3C;outline-offset:-2px}
+.sgr-head-t{flex:1;min-width:0}
+.sgr-name{display:block;font-family:'Roboto Slab',Georgia,serif;font-weight:400;font-size:1.3rem;color:#062F4F;
+  line-height:1.3}
+.sgr-blurb{display:block;font-size:.88rem;color:#4A5E6D;margin-top:.15rem;line-height:1.5}
+.sgr-count{flex:none;font-size:.8rem;font-weight:600;color:#062F4F;background:#EEF2F1;border-radius:999px;
+  padding:.2rem .65rem;white-space:nowrap}
+.sgr-chev{flex:none;width:2rem;height:2rem;border-radius:50%;display:grid;place-items:center;background:#EEF2F1;
+  transition:transform .35s var(--sgr-ease),background .2s}
+.sgr-chev::before{content:"";width:.5rem;height:.5rem;border-right:2px solid #062F4F;border-bottom:2px solid #062F4F;
+  transform:translateY(-2px) rotate(45deg)}
+.sgr-sec.open .sgr-chev{transform:rotate(180deg);background:#F2D15C}
+.sgr-body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s var(--sgr-ease)}
+.sgr-sec.open .sgr-body{grid-template-rows:1fr}
+.sgr-inner{overflow:hidden;min-height:0}
+.sgr-list{padding:0 .75rem 1rem}
+.sgr-hub{display:inline-block;margin:0 1.25rem .25rem;font-size:.85rem;font-weight:500;color:#0D7A3C}
+.sgr-group{font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#4A5E6D;
+  margin:1rem .5rem .35rem}
+.sgr-row{display:flex;align-items:center;gap:1rem;padding:.7rem .75rem;border-radius:8px;text-decoration:none;
+  color:inherit;position:relative;opacity:0;transform:translateY(6px);
+  transition:background .2s,opacity .35s var(--sgr-ease),transform .35s var(--sgr-ease)}
+.sgr-sec.open .sgr-row{opacity:1;transform:none;transition-delay:calc(var(--i,0) * 25ms)}
+.sgr-row::before{content:"";position:absolute;left:0;top:.6rem;bottom:.6rem;width:3px;border-radius:3px;
+  background:var(--a);transform:scaleY(0);transition:transform .2s}
+.sgr-row:hover,.sgr-row:focus-visible{background:#F6F8F8;outline:0}
+.sgr-row:hover::before,.sgr-row:focus-visible::before{transform:scaleY(1)}
+.sgr-row-main{flex:1;min-width:0}
+.sgr-row-t{display:block;font-weight:600;font-size:.98rem;color:#062F4F;line-height:1.4}
+.sgr-row-s{display:block;font-size:.86rem;color:#4A5E6D;line-height:1.5;margin-top:.15rem;overflow:hidden;
+  display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical}
+.sgr-row:hover .sgr-row-s,.sgr-row:focus-visible .sgr-row-s{-webkit-line-clamp:4}
+.sgr-row-m{flex:none;display:flex;gap:.5rem;align-items:center;font-size:.78rem;color:#4A5E6D}
+.sgr-go{flex:none;color:#0D7A3C;font-weight:600;transition:transform .2s}
+.sgr-row:hover .sgr-go{transform:translateX(4px)}
+.sgr-badge{background:#F8E9C2;color:#6B5208;border-radius:999px;padding:.1rem .55rem;font-weight:600;font-size:.72rem;
+  white-space:nowrap}
+.sgr-tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem;padding:0 1.25rem 1.25rem}
+.sgr-tile{display:flex;flex-direction:column;gap:.5rem;border-radius:10px;padding:1.2rem;text-decoration:none;
+  color:#fff;background:linear-gradient(135deg,#062F4F,#0B3D63);min-height:150px;transition:transform .2s,box-shadow .2s}
+.sgr-tile:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(6,47,79,.25)}
+.sgr-tile .sgr-row-t{color:#fff;font-size:1.05rem}
+.sgr-tile .sgr-row-s{color:#D5DEE3;-webkit-line-clamp:3}
+.sgr-tile .sgr-go{color:#F2D15C;margin-top:auto}
+.sgr-hide{display:none!important}
+.sgr-fallback a{color:#0D7A3C}
+.sgr-fallback h2{font-family:'Roboto Slab',Georgia,serif;font-weight:400;color:#062F4F;font-size:1.2rem}
+@media (max-width:640px){.sgr-row-m .sgr-date{display:none}.sgr-blurb{display:none}.sgr-name{font-size:1.15rem}}
+@media (prefers-reduced-motion:reduce){.sgr-idx *{transition:none!important}.sgr-row{opacity:1;transform:none}}
+</style>
+<div class="sgr-idx"><div id="sgr-research" data-src="" data-only="songrove"><div class="sgr-fallback"><h2>Songrove Botanicals</h2><ul><li><a href="/songrove/b01_phytochemical_potency_drift/">Botanical potency drift</a></li><li><a href="/songrove/b02_erw_mrv_detection/">Enhanced rock weathering</a></li><li><a href="/songrove/b03_agrivoltaics_tipping_point/">Agrivoltaics</a></li><li><a href="/songrove/b04_hnt_rice_chalkiness/">Hot nights and rice quality</a></li><li><a href="/songrove/b05_maize_pollen_heat_vpd/">Maize pollen at anthesis</a></li><li><a href="/songrove/b06_co2_nutrient_dilution/">CO2 nutrient dilution</a></li><li><a href="/songrove/b07_rice_awd_tradeoff/">Rice AWD</a></li><li><a href="/songrove/b08_pollinator_limited_yield/">Pollinator-limited yield</a></li><li><a href="/songrove/b09_inoculant_efficacy_gap/">Microbial inoculants</a></li><li><a href="/songrove/b10_intercropping_cover_legacy/">Intercropping overyielding under high inputs, and cover-crop legacies that flip sign by climate</a></li><li><a href="/songrove/s01_adulteration_risk_scoring/">Botanical adulteration risk scoring</a></li><li><a href="/songrove/s02_ashwagandha_label_gap/">Ashwagandha label claims</a></li><li><a href="/songrove/s03_herb_drying_eo_retention/">Herb drying</a></li><li><a href="/songrove/s04_saffron_fingerprinting/">Saffron provenance and adulteration fingerprinting</a></li><li><a href="/songrove/s05_hemp_thc_compliance/">Hemp &#x27;hot crop&#x27; risk</a></li><li><a href="/songrove/s06_cacao_cadmium_blending/">Cacao cadmium</a></li><li><a href="/songrove/s07_vanilla_price_quality/">Vanilla boom-bust</a></li><li><a href="/songrove/s08_postharvest_storage_roi/">Smallholder post-harvest loss</a></li><li><a href="/songrove/s09_index_insurance_basis_risk/">Index insurance basis risk</a></li><li><a href="/songrove/s10_soil_carbon_mrv_aggregation/">Soil-carbon MRV for smallholders</a></li></ul></div></div></div>
+<script>
+(function () {
+  var root = document.getElementById('sgr-research');
+  if (!root || !window.fetch || !document.querySelector) return;
+  var base = root.getAttribute('data-src') || '';
+  var KEY = 'sgr-open-sections';
+  // data-only="songrove" (comma-separated keys): show just those sections, open, without touching the
+  // open/closed state remembered for the full Research index.
+  var only = (root.getAttribute('data-only') || '').split(',').filter(Boolean);
+  var focused = only.length > 0;
+  function load() { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }
+  function save(o) { if (focused) return; try { localStorage.setItem(KEY, JSON.stringify(o)); } catch (e) {} }
+  function esc(s) { var d = document.createElement('div'); d.textContent = s == null ? '' : s; return d.innerHTML; }
+  var LABEL = { analysis: 'analyses', explainer: 'explainers', app: 'apps' };
+
+  fetch(base + '/index.json', { cache: 'no-cache' })
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(render)
+    .catch(function () { /* keep the fallback content */ });
+
+  function item(p, s, i) {
+    var badge = p.simulated ? '<span class="sgr-badge">Simulated</span>' : '';
+    var q = (p.title + ' ' + p.summary + ' ' + (p.group || '') + ' ' + s.label).toLowerCase();
+    var go = s.layout === 'tiles' ? 'Open →' : '→';
+    var cls = s.layout === 'tiles' ? 'sgr-tile' : 'sgr-row';
+    return '<a class="' + cls + '" href="' + base + p.url + '" data-q="' + esc(q) + '" style="--i:' + i + '">' +
+      '<span class="sgr-row-main"><span class="sgr-row-t">' + esc(p.title) + '</span>' +
+      '<span class="sgr-row-s">' + esc(p.summary) + '</span></span>' +
+      (s.layout === 'tiles' ? '' : '<span class="sgr-row-m">' + badge + '<span class="sgr-date">' + esc(p.date) +
+        '</span></span>') + '<span class="sgr-go" aria-hidden="true">' + go + '</span></a>';
+  }
+
+  function render(data) {
+    var open = load();
+    if (focused) {
+      data.sections = data.sections.filter(function (s) { return only.indexOf(s.key) !== -1; });
+      data.pages = data.pages.filter(function (p) { return only.indexOf(p.section) !== -1; });
+      open = {}; only.forEach(function (k) { open[k] = true; });
+    }
+    var secs = data.sections.filter(function (s) {
+      return data.pages.some(function (p) { return p.section === s.key; });
+    });
+    if (location.hash) { var h = location.hash.slice(1); if (secs.some(function (s) { return s.key === h; })) open[h] = true; }
+    var total = data.pages.length;
+    var out = '<div class="sgr-tools"><label class="sgr-search">' +
+      '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">' +
+      '<circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>' +
+      '<input type="search" placeholder="Search ' + total + ' ' +
+      (secs.length === 1 ? esc(secs[0].label) + ' ' + (LABEL[secs[0].kind] || 'items') : 'pieces of research') +
+      '" aria-label="Search research"></label>' +
+      (secs.length > 1 ? '<button type="button" class="sgr-btn sgr-all">Expand all</button>' : '') + '</div>';
+    out += '<div class="sgr-chips' + (secs.length > 1 ? '' : ' sgr-hide') + '">' + secs.map(function (s) {
+      var n = data.pages.filter(function (p) { return p.section === s.key; }).length;
+      return '<button type="button" class="sgr-chip" data-k="' + s.key + '" style="--a:' + s.accent + '"><i></i>' +
+        esc(s.label) + ' <b>' + n + '</b></button>';
+    }).join('') + '</div><p class="sgr-empty sgr-hide">No matches. Try another word.</p>';
+
+    out += secs.map(function (s) {
+      var items = data.pages.filter(function (p) { return p.section === s.key; });
+      var isOpen = !!open[s.key];
+      var body = '', group = null, i = 0;
+      if (s.hub) body += '<a class="sgr-hub" href="' + base + s.hub + '">Overview of all ' + items.length + ' →</a>';
+      if (s.layout === 'tiles') {
+        body += '<div class="sgr-tiles">' + items.map(function (p) { return item(p, s, i++); }).join('') + '</div>';
+      } else {
+        body += '<div class="sgr-list">';
+        items.forEach(function (p) {
+          if (p.group && p.group !== group) { group = p.group; body += '<div class="sgr-group">' + esc(group) + '</div>'; }
+          body += item(p, s, i++);
+        });
+        body += '</div>';
+      }
+      return '<section class="sgr-sec' + (isOpen ? ' open' : '') + '" id="' + s.key + '" data-k="' + s.key +
+        '" style="--a:' + s.accent + '">' +
+        '<button type="button" class="sgr-head" aria-expanded="' + isOpen + '" aria-controls="sgr-b-' + s.key + '">' +
+        '<span class="sgr-head-t"><span class="sgr-name">' + esc(s.label) + '</span>' +
+        '<span class="sgr-blurb">' + esc(s.blurb) + '</span></span>' +
+        '<span class="sgr-count" data-n="' + items.length + '">' + items.length + ' ' + (LABEL[s.kind] || 'items') +
+        '</span><span class="sgr-chev" aria-hidden="true"></span></button>' +
+        '<div class="sgr-body" id="sgr-b-' + s.key + '"' + (isOpen ? '' : ' inert') + '><div class="sgr-inner">' +
+        body + '</div></div></section>';
+    }).join('');
+    root.innerHTML = out;
+
+    var input = root.querySelector('input');
+    var allBtn = root.querySelector('.sgr-all');
+    var sections = [].slice.call(root.querySelectorAll('.sgr-sec'));
+    function setOpen(sec, on) {
+      sec.classList.toggle('open', on);
+      sec.querySelector('.sgr-head').setAttribute('aria-expanded', on);
+      var b = sec.querySelector('.sgr-body');
+      if (on) b.removeAttribute('inert'); else b.setAttribute('inert', '');
+    }
+    function syncAll() {
+      if (!allBtn) return;
+      var allOpen = sections.every(function (s) { return s.classList.contains('open'); });
+      allBtn.textContent = allOpen ? 'Collapse all' : 'Expand all';
+    }
+    syncAll();
+
+    root.addEventListener('click', function (e) {
+      var head = e.target.closest('.sgr-head');
+      var chip = e.target.closest('.sgr-chip');
+      if (head) {
+        var sec = head.parentNode, on = !sec.classList.contains('open');
+        setOpen(sec, on);
+        if (!input.value) { open[sec.getAttribute('data-k')] = on; save(open); }
+        syncAll();
+      } else if (chip) {
+        var target = root.querySelector('.sgr-sec[data-k="' + chip.getAttribute('data-k') + '"]');
+        if (input.value) { input.value = ''; filter(); }
+        setOpen(target, true); open[target.getAttribute('data-k')] = true; save(open); syncAll();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else if (allBtn && e.target === allBtn) {
+        var to = allBtn.textContent === 'Expand all';
+        sections.forEach(function (s) { setOpen(s, to); open[s.getAttribute('data-k')] = to; });
+        save(open); syncAll();
+      }
+    });
+
+    function filter() {
+      var words = input.value.toLowerCase().split(/\s+/).filter(Boolean);
+      var any = false;
+      sections.forEach(function (sec) {
+        var n = 0, rows = [].slice.call(sec.querySelectorAll('[data-q]'));
+        rows.forEach(function (r) {
+          var hit = words.every(function (w) { return r.getAttribute('data-q').indexOf(w) !== -1; });
+          r.classList.toggle('sgr-hide', !hit); if (hit) n++;
+        });
+        [].slice.call(sec.querySelectorAll('.sgr-group')).forEach(function (g) {
+          var el = g.nextElementSibling, vis = false;
+          while (el && !el.classList.contains('sgr-group')) { if (!el.classList.contains('sgr-hide')) vis = true; el = el.nextElementSibling; }
+          g.classList.toggle('sgr-hide', !vis);
+        });
+        var count = sec.querySelector('.sgr-count'), total = count.getAttribute('data-n');
+        var label = count.textContent.replace(/^[\d\s]+(of\s+\d+\s+)?/, '');
+        count.textContent = (words.length ? n + ' of ' + total : total) + ' ' + label;
+        sec.classList.toggle('sgr-hide', words.length > 0 && n === 0);
+        if (words.length) setOpen(sec, n > 0); else setOpen(sec, !!open[sec.getAttribute('data-k')]);
+        if (n) any = true;
+      });
+      root.querySelector('.sgr-empty').classList.toggle('sgr-hide', any || !words.length);
+      syncAll();
+    }
+    input.addEventListener('input', filter);
+  }
+})();
+</script>
+</main>
+<footer class="sgr-foot"><div class="in">© 2026 Stellar Grove ·
+<a href="https://www.stellargrove.com">stellargrove.com</a></div></footer>
+</body>
+</html>

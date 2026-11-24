@@ -122,8 +122,12 @@ body{margin:0;background:#fff;color:#0D1C24;font-family:'Montserrat',system-ui,-
   if (!root || !window.fetch || !document.querySelector) return;
   var base = root.getAttribute('data-src') || '';
   var KEY = 'sgr-open-sections';
+  // data-only="songrove" (comma-separated keys): show just those sections, open, without touching the
+  // open/closed state remembered for the full Research index.
+  var only = (root.getAttribute('data-only') || '').split(',').filter(Boolean);
+  var focused = only.length > 0;
   function load() { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }
-  function save(o) { try { localStorage.setItem(KEY, JSON.stringify(o)); } catch (e) {} }
+  function save(o) { if (focused) return; try { localStorage.setItem(KEY, JSON.stringify(o)); } catch (e) {} }
   function esc(s) { var d = document.createElement('div'); d.textContent = s == null ? '' : s; return d.innerHTML; }
   var LABEL = { analysis: 'analyses', explainer: 'explainers', app: 'apps' };
 
@@ -146,6 +150,11 @@ body{margin:0;background:#fff;color:#0D1C24;font-family:'Montserrat',system-ui,-
 
   function render(data) {
     var open = load();
+    if (focused) {
+      data.sections = data.sections.filter(function (s) { return only.indexOf(s.key) !== -1; });
+      data.pages = data.pages.filter(function (p) { return only.indexOf(p.section) !== -1; });
+      open = {}; only.forEach(function (k) { open[k] = true; });
+    }
     var secs = data.sections.filter(function (s) {
       return data.pages.some(function (p) { return p.section === s.key; });
     });
@@ -154,9 +163,11 @@ body{margin:0;background:#fff;color:#0D1C24;font-family:'Montserrat',system-ui,-
     var out = '<div class="sgr-tools"><label class="sgr-search">' +
       '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">' +
       '<circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>' +
-      '<input type="search" placeholder="Search ' + total + ' pieces of research" aria-label="Search research"></label>' +
-      '<button type="button" class="sgr-btn sgr-all">Expand all</button></div>';
-    out += '<div class="sgr-chips">' + secs.map(function (s) {
+      '<input type="search" placeholder="Search ' + total + ' ' +
+      (secs.length === 1 ? esc(secs[0].label) + ' ' + (LABEL[secs[0].kind] || 'items') : 'pieces of research') +
+      '" aria-label="Search research"></label>' +
+      (secs.length > 1 ? '<button type="button" class="sgr-btn sgr-all">Expand all</button>' : '') + '</div>';
+    out += '<div class="sgr-chips' + (secs.length > 1 ? '' : ' sgr-hide') + '">' + secs.map(function (s) {
       var n = data.pages.filter(function (p) { return p.section === s.key; }).length;
       return '<button type="button" class="sgr-chip" data-k="' + s.key + '" style="--a:' + s.accent + '"><i></i>' +
         esc(s.label) + ' <b>' + n + '</b></button>';
@@ -199,6 +210,7 @@ body{margin:0;background:#fff;color:#0D1C24;font-family:'Montserrat',system-ui,-
       if (on) b.removeAttribute('inert'); else b.setAttribute('inert', '');
     }
     function syncAll() {
+      if (!allBtn) return;
       var allOpen = sections.every(function (s) { return s.classList.contains('open'); });
       allBtn.textContent = allOpen ? 'Collapse all' : 'Expand all';
     }
@@ -217,7 +229,7 @@ body{margin:0;background:#fff;color:#0D1C24;font-family:'Montserrat',system-ui,-
         if (input.value) { input.value = ''; filter(); }
         setOpen(target, true); open[target.getAttribute('data-k')] = true; save(open); syncAll();
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      } else if (e.target === allBtn) {
+      } else if (allBtn && e.target === allBtn) {
         var to = allBtn.textContent === 'Expand all';
         sections.forEach(function (s) { setOpen(s, to); open[s.getAttribute('data-k')] = to; });
         save(open); syncAll();
